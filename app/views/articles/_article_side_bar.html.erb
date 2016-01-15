@@ -1,0 +1,14 @@
+<%= link_to article_path(article_side_bar), style:"clear: both;" do %>
+  <div class="article-side-bar">
+    <%= image_tag "iphone.jpg" %>
+    <span class="description-article-side-bar">
+      <h5><%= truncate(article_side_bar.title, length: 70) %></h5>
+    </span>
+    <span class="time-article-side-bar">
+      <h6>
+        <span class="fa fa-calendar"></span>
+        <%= article_side_bar.created_at.strftime("%Y-%m-%d %I:%M:%S %p") %>
+      </h6>
+    </span>
+  </div>
+<% end %>

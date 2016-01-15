@@ -1,0 +1,150 @@
+<div class="col-md-12 category-show-box">
+  <%= link_to article_path(@articles.first) do %>
+    <div class="col-md-3 main-article-show">
+      <%= image_tag "iphone.jpg", class: "main-imag" %>
+      <div class="main-show-description hvr-shutter-out-horizontal">
+        <h3><%= truncate(@articles.first.title, length: 80) %></h3>
+        <div class="main-show-user-show hvr-sweep-to-top">
+          <span class="fa fa-calendar"></span>&nbsp;
+          <%= @articles.first.created_at.strftime("%Y-%m-%d %I:%M:%S %p") %>
+          <span class="pull-right">&nbsp;
+          <%= @articles.first.view %></span>
+          <span class="fa fa-eye pull-right"></span>
+        </div>
+      </div>
+    </div>
+  <% end %>
+  <div class="col-md-9 sub-article-list-show">
+    <%= link_to article_path(@articles.second) do %>
+      <div class="col-md-3 sub-article-show-line1">
+        <div class="aa bb">
+          <%= image_tag "computer.jpg" %>
+          <div class="sub-show-description hvr-shutter-out-horizontal">
+            <h3><%= truncate(@articles.second.title, length: 60) %></h3>
+            <div class="sub-show-user-show hvr-sweep-to-top">
+              <span class="fa fa-calendar"></span>&nbsp;
+              <%= @articles.second.created_at.strftime("%Y-%m-%d %I:%M:%S %p") %>
+              <span class="pull-right">&nbsp;12345</span>
+              <span class="fa fa-eye pull-right"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% end %>
+    <%= link_to article_path(@articles.third) do %>
+      <div class="col-md-3 sub-article-show-line1">
+        <div class="aa">
+          <%= image_tag "iphone.jpg" %>
+          <div class="sub-show-description hvr-shutter-out-horizontal">
+            <h3><%= truncate(@articles.third.title, length: 60) %> </h3>
+            <div class="sub-show-user-show hvr-sweep-to-top">
+              <span class="fa fa-calendar"></span>&nbsp;
+              <%= @articles.third.created_at.strftime("%Y-%m-%d %I:%M:%S %p") %>
+              <span class="pull-right">&nbsp;12345</span>
+              <span class="fa fa-eye pull-right"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% end %>
+    <%= link_to article_path(@articles.fourth) do %>
+      <div class="col-md-3 sub-article-show-line1">
+        <div class="aa">
+          <%= image_tag "chip.jpg" %>
+          <div class="sub-show-description hvr-shutter-out-horizontal">
+            <h3><%= truncate(@articles.fourth.title, length: 60) %></h3>
+            <div class="sub-show-user-show hvr-sweep-to-top">
+              <span class="fa fa-calendar"></span>&nbsp;
+              <%= @articles.fourth.created_at.strftime("%Y-%m-%d %I:%M:%S %p") %>
+              <span class="pull-right">&nbsp;12345</span>
+              <span class="fa fa-eye pull-right"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% end %>
+    <%= link_to article_path(@articles.fifth) do %>
+      <div class="col-md-3 sub-article-show-line1">
+        <div class="aa">
+          <%= image_tag "camera.jpg" %>
+          <div class="sub-show-description hvr-shutter-out-horizontal">
+            <h3><%= truncate(@articles.fifth.title, length: 60) %></h3>
+            <div class="sub-show-user-show hvr-sweep-to-top">
+              <span class="fa fa-calendar"></span>&nbsp;
+              <%= @articles.fifth.created_at.strftime("%Y-%m-%d %I:%M:%S %p") %>
+              <span class="pull-right">&nbsp;12345</span>
+              <span class="fa fa-eye pull-right"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+
+  <div class="col-md-9 sub-article-list-show">
+    <%= link_to article_path(@articles[5]) do %>
+      <div class="col-md-3 sub-article-show-line2">
+        <div class="aa">
+          <%= image_tag "head.jpg" %>
+          <div class="sub-show-description hvr-shutter-out-horizontal">
+            <h3><%= truncate(@articles[5].title, length: 60) %></h3>
+            <div class="sub-show-user-show hvr-sweep-to-top">
+              <span class="fa fa-calendar"></span>&nbsp;
+              <%= @articles[5].created_at.strftime("%Y-%m-%d %I:%M:%S %p") %>
+              <span class="pull-right">&nbsp;12345</span>
+              <span class="fa fa-eye pull-right"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% end %>
+    <%= link_to article_path(@articles[6]) do %>
+      <div class="col-md-3 sub-article-show-line2">
+        <div class="aa">
+          <%= image_tag "window.jpg" %>
+          <div class="sub-show-description hvr-shutter-out-horizontal">
+            <h3><%= truncate(@articles[6].title, length: 60) %></h3>
+            <div class="sub-show-user-show hvr-sweep-to-top">
+              <span class="fa fa-pencil"></span>&nbsp;
+              <%= @articles[6].created_at.strftime("%Y-%m-%d %I:%M:%S %p") %>
+              <span class="pull-right">&nbsp;12345</span>
+              <span class="fa fa-eye pull-right"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% end %>
+    <%= link_to article_path(@articles[7]) do %>
+      <div class="col-md-3 sub-article-show-line2">
+        <div class="aa">
+          <%= image_tag "sumsung.jpg" %>
+          <div class="sub-show-description hvr-shutter-out-horizontal">
+            <h3><%= truncate(@articles[7].title, length: 60) %></h3>
+            <div class="sub-show-user-show hvr-sweep-to-top">
+              <span class="fa fa-pencil"></span>&nbsp;
+              <%= @articles[7].created_at.strftime("%Y-%m-%d %I:%M:%S %p") %>
+              <span class="pull-right">&nbsp;12345</span>
+              <span class="fa fa-eye pull-right"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% end %>
+    <%= link_to article_path(@articles[8]) do %>
+      <div class="col-md-3 sub-article-show-line2">
+        <div class="aa">
+          <%= image_tag "game.jpg" %>
+          <div class="sub-show-description hvr-shutter-out-horizontal">
+            <h3><%= truncate(@articles[8].title, length: 60) %></h3>
+            <div class="sub-show-user-show hvr-sweep-to-top">
+              <span class="fa fa-pencil"></span>&nbsp;
+              <%= @articles[8].created_at.strftime("%Y-%m-%d %I:%M:%S %p") %>
+              <span class="pull-right">&nbsp;12345</span>
+              <span class="fa fa-eye pull-right"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

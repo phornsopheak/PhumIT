@@ -1,14 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>WebTeach</title>
+  <title><%= full_title yield(:title) %></title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <%= favicon_link_tag 'app_icon.png' %>
 </head>
 <body>
-
-<%= yield %>
-
+  <div id="wrapper">
+      <%= render "shared/header" %>
+      <%= render "shared/flash" %>
+      <div class="content container">
+        <%= yield %>
+      </div>
+      <%= render "shared/footer" %>
+      <a href="#" class="scrollToTop fa fa-arrow-circle-up fa-2x"></a>
+  </div>
 </body>
 </html>

@@ -1,0 +1,137 @@
+<div class="footer">
+  <div class="row col-md-12">
+    <div class="col-md-3">
+      <%= image_tag "app_icon.png" %>
+      <%= image_tag "title_icon.png", class: "title_icon_bottom" %>
+    </div>
+    <div class="col-md-6 clear-padding">
+      <div class="col-md-4">
+        <ul class="list-unstyled display-inline">
+          <li>
+            <%= link_to "#", class: "fa fa-home" do %>
+              <span >&nbsp;&nbsp;<%= t "tab_bar.home" %></span>
+            <% end %>
+          </li>
+          <li>
+            <%= link_to "#", class: "fa fa-newspaper-o" do %>
+              <span>&nbsp;&nbsp;<%= t "tab_bar.news" %></span>
+            <% end %>
+          </li>
+          <li>
+            <%= link_to "#", class: "fa fa-book" do %>
+              <span>&nbsp;&nbsp;<%= t "tab_bar.more_knowledge" %></span>
+            <% end %>
+          </li>
+          <li>
+            <%= link_to "#", class: "fa fa-pie-chart" do %>
+              <span>&nbsp;&nbsp;<%= t "tab_bar.electronic_device" %></span>
+            <% end %>
+          </li>
+        </ul>
+      </div>
+      <div class="col-md-4">
+        <ul class="list-unstyled display-inline">
+          <li>
+            <%= link_to "#", class: "fa fa-laptop", "data-toggle" =>"dropdown",
+              "role" => "button", "aria-haspopup" => "true", "aria-expanded" => "false" do %>
+              <span>&nbsp;&nbsp;<%= t "tab_bar.computer" %></span>
+            <% end %>
+          </li>
+            <li>
+              <%= link_to "#", class: "fa fa-windows" do %>
+                <span>&nbsp;&nbsp;<%= t "sub_tab_bar.computer.operation_system" %></span>
+              <% end %>
+            </li>
+            <li>
+              <%= link_to "#", class: "fa fa-hdd-o" do %>
+                <span>&nbsp;&nbsp;<%= t "sub_tab_bar.computer.hardware" %></span>
+              <% end %>
+            </li>
+            <li>
+              <%= link_to "#", class: "fa fa-recycle" do %>
+                <span>&nbsp;&nbsp;<%= t "sub_tab_bar.computer.software" %></span>
+              <% end %>
+            </li>
+            <li>
+              <%= link_to "#", class: "fa fa-lightbulb-o" do %>
+                <span>&nbsp;&nbsp;<%= t "sub_tab_bar.computer.tip_computer" %></span>
+              <% end %>
+            </li>
+          </li>
+        </ul>
+      </div>
+      <div class="col-md-4">
+        <ul class="list-unstyled display-inline">
+          <li>
+            <%= link_to "#", class: "fa fa-tablet", "data-toggle" =>"dropdown",
+            "role" => "button", "aria-haspopup" => "true", "aria-expanded" => "false" do %>
+              <span>&nbsp;&nbsp;<%= t "tab_bar.mobile" %></span>
+            <% end %>
+           </li>
+            <li>
+              <%= link_to "#", class: "fa fa-th-large" do %>
+                <span>&nbsp;&nbsp;<%= t "sub_tab_bar.mobile.window_phone" %></span>
+              <% end %>
+            </li>
+            <li>
+              <%= link_to "#", class: "fa fa-android" do %>
+                <span>&nbsp;&nbsp;<%= t "sub_tab_bar.mobile.android" %></span>
+              <% end %>
+            </li>
+            <li>
+              <%= link_to "#", class: "fa fa-apple" do %>
+                <span>&nbsp;&nbsp;<%= t "sub_tab_bar.mobile.ios" %></span>
+              <% end %>
+            </li>
+            <li>
+              <%= link_to "#", class: "fa fa-lightbulb-o" do %>
+                <span>&nbsp;&nbsp;<%= t "sub_tab_bar.mobile.tip_mobile" %></span>
+              <% end %>
+            </li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-md-2">
+      <ul class="list-unstyled display-inline">
+        <li>
+          <%= link_to "#", class: "fa fa-info-circle" do %>
+            <span><%= t "tab_bar.about_us" %></span>
+          <% end %>
+        </li>
+        <li>
+          <%= link_to "#", class: "fa fa-phone" do %>
+            <span>&nbsp;&nbsp;<%= t "bottom_tab_bar.connect_us" %></span>
+          <% end %>
+        </li>
+        <li>
+          <%= link_to "#", class: "fa fa-suitcase" do %>
+            <span>&nbsp;&nbsp;<%= t "bottom_tab_bar.advertise" %></span>
+          <% end %>
+        </li>
+      </ul>
+    </div>
+    <div class="col-md-1">
+      <ul class="list-unstyled socail_network">
+        <li>
+          <%= link_to "", "#", class: "fa fa-facebook-square fa-2x" %>
+        </li>
+        <li>
+          <%= link_to "", "#", class: "fa fa-twitter-square fa-2x" %>
+        </li>
+        <li>
+          <%= link_to "", "#", class: "fa fa-google-plus-square fa-2x" %>
+        </li>
+        <li>
+          <%= link_to "", "#", class: "fa fa-instagram fa-2x" %>
+        </li>
+        <li>
+          <%= link_to "", "#", class: "fa fa-youtube-square fa-2x" %>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="copy_right">
+  <div class="pull-left">Copyright 2016 - Phum IT team.</div>
+  <div class="pull-right">Developed by: Phum IT team</div>
+</div>

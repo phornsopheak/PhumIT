@@ -1,0 +1,11 @@
+en:
+  articles:
+    labels:
+      source: "ប្រភព:"
+      tag: "Tag:"
+      more_article: "ជាច្រើនទៀត"
+      read_more: "អានបន្ត"
+    side_bar:
+      relate_article: "អត្ថបទស្រដៀងគ្នា"
+      popular_article: "អត្ថបទពេញនិយម"
+      fb_page: "ទំព័រហ្វេសប៊ុក"

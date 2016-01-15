@@ -1,0 +1,10 @@
+<div class="header-side-bar">
+  <h4>
+    <span class="fa fa-align-justify"></span>
+    &nbsp;<%= t "articles.side_bar.relate_article" %>
+  </h4>
+  <%= render partial: "articles/article_side_bar", collection: @relate_articles, as: :article_side_bar %>
+  <div class="more-article hvr-underline-from-center">
+    <%= link_to t("articles.labels.more_article"), category_path(@category) %>
+  </div>
+</div>

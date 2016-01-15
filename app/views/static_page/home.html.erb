@@ -1,0 +1,86 @@
+<% provide :title, t("tab_bar.home") %>
+<div class="home">
+
+  <div class="col-md-12 clear-col-margin">
+    <div class="wraper-header clear-col-margin">
+      <div class="header-category">
+        <span class="fa fa-list"></span>
+        <%= t "tab_bar.all_articles" %>
+        <span class="fa fa-chevron-up pull-right cursor " id="hide-show-articles"></span>
+      </div>
+    </div>
+    <div class="contain-category category-articles">
+      <%= render "category_show" %>
+    </div>
+  </div>
+
+  <div class="col-md-12 clear-col-margin">
+    <div class="wraper-header clear-col-margin">
+      <div class="header-category">
+        <span class="fa fa-newspaper-o"></span>
+        <%= t "tab_bar.news" %>
+        <span class="fa fa-chevron-up pull-right cursor " id="hide-show-news"></span>
+      </div>
+    </div>
+    <div class="contain-category category-news">
+      <% @articles = @news_articles %>
+      <%= render "category_show" %>
+    </div>
+  </div>
+
+  <div class="col-md-12 clear-col-margin">
+    <div class="wraper-header clear-col-margin">
+      <div class="header-category">
+        <span class="fa fa-desktop"></span>
+        <%= t "tab_bar.computer" %>
+        <span class="fa fa-chevron-up pull-right cursor" id="hide-show-computer"></span>
+      </div>
+    </div>
+    <div class="contain-category category-computer">
+      <% @articles = @computer_articles %>
+      <%= render "category_show" %>
+    </div>
+  </div>
+
+  <div class="col-md-12 clear-col-margin">
+    <div class="wraper-header clear-col-margin">
+      <div class="header-category">
+        <span class="fa fa-tablet"></span>
+        <%= t "tab_bar.mobile" %>
+        <span class="fa fa-chevron-up pull-right cursor" id="hide-show-mobile"></span>
+      </div>
+    </div>
+    <div class="contain-category category-mobile">
+      <% @articles = @mobile_articles %>
+      <%= render "category_show" %>
+    </div>
+  </div>
+
+  <div class="col-md-12 clear-col-margin">
+    <div class="wraper-header clear-col-margin">
+      <div class="header-category">
+        <span class="fa fa-book"></span>
+        <%= t "tab_bar.more_knowledge" %>
+        <span class="fa fa-chevron-up pull-right cursor" id="hide-show-more-knowledge"></span>
+      </div>
+    </div>
+    <div class="contain-category category-more-knowledge">
+      <% @articles = @knowledge_articles %>
+      <%= render "category_show" %>
+    </div>
+  </div>
+
+  <div class="col-md-12 clear-col-margin margin-bottom-category">
+    <div class="wraper-header clear-col-margin">
+      <div class="header-category">
+        <span class="fa fa-pie-chart"></span>
+        <%= t "tab_bar.electronic_device" %>
+        <span class="fa fa-chevron-up pull-right cursor" id="hide-show-popular-article"></span>
+      </div>
+    </div>
+    <div class="contain-category category-popular-article">
+      <% @articles = @electronic_device_articles %>
+      <%= render "category_show" %>
+    </div>
+  </div>
+</div>

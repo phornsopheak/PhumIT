@@ -1,0 +1,17 @@
+<div class="col-md-12 footer-article">
+  <div class="col-md-4">
+    <%= image_tag "user.png", class: "img-circle" %>
+     &nbsp;ផន សុភក្រ័
+  </div>
+  <div class="col-md-8">
+    <div class="pull-right">
+      <%= t "articles.labels.source" %>&nbsp;
+      <%= @article.source %>
+      <div class="padding-top-tag">
+       <%= t "articles.labels.tag" %>&nbsp;
+       <%= render @article.categories %>
+       <%= render @article.lists %>
+      </div>
+    </div>
+  </div>
+</div>

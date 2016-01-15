@@ -1,0 +1,16 @@
+<div class="col-md-12 first-article clear-padding-col">
+  <div class="col-md-5 image-padding">
+    <%= link_to article_path(article) do %>
+      <%= image_tag "iphone.jpg" %>
+    <% end %>
+  </div>
+  <div class="col-md-7 title-first">
+    <%= link_to article_path(article) do %>
+      <h3><%= truncate(article.title, length: 80) %></h3>
+    <% end %>
+    <div class="description">
+      <%= truncate(article.description, length: 230) %>
+      <%= link_to t("articles.labels.read_more"), article_path(article), class: "label label-warning" %>
+    </div>
+  </div>
+</div>

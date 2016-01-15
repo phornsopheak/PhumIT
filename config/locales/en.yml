@@ -1,23 +1,33 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t 'hello'
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t('hello') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# To learn more, please read the Rails Internationalization guide
-# available at http://guides.rubyonrails.org/i18n.html.
-
 en:
-  hello: "Hello world"
+  headers:
+    title: "Phum IT"
+    collection_article: "អត្ថបទ"
+  tab_bar:
+    home: "ទំព័រដើម"
+    computer: "កុំព្យូទ័រ"
+    mobile: "ទូរស័ព្ទ"
+    more_knowledge: "ចំណេះដឹងផ្សេងៗ"
+    news: "ព័ត៌មាន"
+    about_us: " អំពីយើង"
+    electronic_device: "ឧបករណ៍អេឡិតត្រូនិច"
+    all_articles: "អត្ថបទថ្មីៗ"
+  sub_tab_bar:
+    computer:
+      operation_system: "ប្រព័ន្ធប្រតិបត្តិការ"
+      hardware: "ផ្នែករឹងកុំព្យូទ័រ"
+      software: "កម្មវិធីកុំព្យូទ័រ"
+      tip_computer: "គន្លឹះកុំព្យូទ័រ"
+    mobile:
+      window_phone: "Windows Phone"
+      android: "Android"
+      ios: "IOS"
+      tip_mobile: "គន្លឹះទូរស័ព្ទ"
+    tips:
+     more_tip: "គន្លឹះផ្សេងៗ"
+  bottom_tab_bar:
+    connect_us: "ទាក់ទងយើង"
+    advertise: "ផ្សាយពាណិជ្ជកម្ម"
+  label:
+    more_article: ""
+    search_for: "ស្វែងរក..."
+    go: "Go!"

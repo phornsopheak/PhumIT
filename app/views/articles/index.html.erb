@@ -1,0 +1,20 @@
+<% provide :title, t("header.collection_article") %>
+<div class="list article">
+  <div class="col-md-12 clear-padding-col">
+    <div class="col-md-8">
+      <div class="content-list">
+       <%= render @articles %>
+       <div class="paginate"><%= paginate @articles, theme: "twitter-bootstrap-3", pagination_class: "pagination-small" %></div>
+      </div>
+    </div>
+    <div class="col-md-4 side-bar facebook-like-page">
+      <%= render "articles/fb_page" %>
+    </div>
+    <div class="col-md-4 side-bar">
+      <%= render "articles/relate_side_bar" %>
+    </div>
+    <div class="col-md-4 side-bar">
+      <%= render "articles/popular_side_bar" %>
+    </div>
+  </div>
+</div>

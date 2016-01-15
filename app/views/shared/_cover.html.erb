@@ -1,0 +1,27 @@
+<div class="cover">
+  <%= image_tag "cover.jpg", class: "size-title" %>
+  <%= link_to root_path do %>
+    <%= image_tag "app_icon.png", class: "size-app-icon" %>
+    <%= image_tag "title_icon.png", class: "size-title-icon" %>
+  <% end %>
+  <div class="social-network">
+    <div class="link pull-right">
+      <%= render 'shared/social_network' %>
+    </div>
+
+    <div class="link-small pull-right" data-toggle="tooltip" title="ShareUs" data-placement="left">
+      <%= link_to "", "javascript:void(0)", "data-toggle" => "popover", "data-placement" => "bottom", "data-content" => "#{render 'shared/social_network'}","data-trigger" => "focus", class: "fa fa-share-alt-square fa-2x padding-left-icon" %>
+    </div>
+    <br/>
+    <div class="width-form-group ">
+      <div class="pull-right">
+        <%= search_form_for @q, class: "input-group" do |f| %>
+          <%= f.search_field :title, class: "form-control width-text pull-right", placeholder: t("label.search_for") %>
+          <span class="input-group-btn">
+            <%= f.submit t("label.go"), class: "btn btn-primary no-radius" %>
+          </span>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
