@@ -1,4 +1,5 @@
 class ArticlesController < ApplicationController
+  before_action :authenticate_user!
 
   def index
     @articles = @q.result.page(params[:page]).per(10)

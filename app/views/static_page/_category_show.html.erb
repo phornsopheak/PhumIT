@@ -1,7 +1,7 @@
 <div class="col-md-12 category-show-box">
   <%= link_to article_path(@articles.first) do %>
     <div class="col-md-3 main-article-show">
-      <%= image_tag "iphone.jpg", class: "main-imag" %>
+      <%= image_tag @articles.first.image_url, class: "main-imag" %>
       <div class="main-show-description hvr-shutter-out-horizontal">
         <h3><%= truncate(@articles.first.title, length: 80) %></h3>
         <div class="main-show-user-show hvr-sweep-to-top">
@@ -18,7 +18,7 @@
     <%= link_to article_path(@articles.second) do %>
       <div class="col-md-3 sub-article-show-line1">
         <div class="aa bb">
-          <%= image_tag "computer.jpg" %>
+          <%= image_tag @articles.second.image_url %>
           <div class="sub-show-description hvr-shutter-out-horizontal">
             <h3><%= truncate(@articles.second.title, length: 60) %></h3>
             <div class="sub-show-user-show hvr-sweep-to-top">
@@ -34,7 +34,7 @@
     <%= link_to article_path(@articles.third) do %>
       <div class="col-md-3 sub-article-show-line1">
         <div class="aa">
-          <%= image_tag "iphone.jpg" %>
+          <%= image_tag @articles.third.image_url %>
           <div class="sub-show-description hvr-shutter-out-horizontal">
             <h3><%= truncate(@articles.third.title, length: 60) %> </h3>
             <div class="sub-show-user-show hvr-sweep-to-top">
@@ -50,7 +50,7 @@
     <%= link_to article_path(@articles.fourth) do %>
       <div class="col-md-3 sub-article-show-line1">
         <div class="aa">
-          <%= image_tag "chip.jpg" %>
+          <%= image_tag @articles.fourth.image_url %>
           <div class="sub-show-description hvr-shutter-out-horizontal">
             <h3><%= truncate(@articles.fourth.title, length: 60) %></h3>
             <div class="sub-show-user-show hvr-sweep-to-top">
@@ -66,7 +66,7 @@
     <%= link_to article_path(@articles.fifth) do %>
       <div class="col-md-3 sub-article-show-line1">
         <div class="aa">
-          <%= image_tag "camera.jpg" %>
+          <%= image_tag @articles.fifth.image_url %>
           <div class="sub-show-description hvr-shutter-out-horizontal">
             <h3><%= truncate(@articles.fifth.title, length: 60) %></h3>
             <div class="sub-show-user-show hvr-sweep-to-top">
@@ -85,7 +85,7 @@
     <%= link_to article_path(@articles[5]) do %>
       <div class="col-md-3 sub-article-show-line2">
         <div class="aa">
-          <%= image_tag "head.jpg" %>
+          <%= image_tag @articles[5].image_url %>
           <div class="sub-show-description hvr-shutter-out-horizontal">
             <h3><%= truncate(@articles[5].title, length: 60) %></h3>
             <div class="sub-show-user-show hvr-sweep-to-top">
