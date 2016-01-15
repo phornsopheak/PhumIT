@@ -5,6 +5,7 @@ class CreateArticles < ActiveRecord::Migration
       t.text :description
       t.integer :view
       t.text :source
+      t.string :image
 
       t.timestamps null: false
     end
