@@ -1,12 +1,16 @@
 <% provide :title, t("tab_bar.home") %>
 <div class="home">
-
   <div class="col-md-12 clear-col-margin">
     <div class="wraper-header clear-col-margin">
       <div class="header-category">
-        <span class="fa fa-list"></span>
-        <%= t "tab_bar.all_articles" %>
-        <span class="fa fa-chevron-up pull-right cursor " id="hide-show-articles"></span>
+        <%= link_to articles_path do %>
+          <span class="fa fa-list"></span>
+          <%= t "tab_bar.all_articles" %>
+        <% end %>
+        <span class="fa fa-chevron-up cursor arrow-position" id="hide-show-articles"></span>
+        <%= link_to articles_path, class: "pull-right more-article" do %>
+          <i><%= t "label.more_article" %></i>
+        <% end %>
       </div>
     </div>
     <div class="contain-category category-articles">
@@ -17,9 +21,14 @@
   <div class="col-md-12 clear-col-margin">
     <div class="wraper-header clear-col-margin">
       <div class="header-category">
-        <span class="fa fa-newspaper-o"></span>
-        <%= t "tab_bar.news" %>
-        <span class="fa fa-chevron-up pull-right cursor " id="hide-show-news"></span>
+        <%= link_to category_path(1) do %>
+          <span class="fa fa-newspaper-o"></span>
+          <%= t "tab_bar.news" %>
+        <% end %>
+        <span class="fa fa-chevron-up cursor arrow-position" id="hide-show-news"></span>
+        <%= link_to category_path(1), class: "pull-right more-article" do %>
+          <i><%= t "label.more_article" %></i>
+        <% end %>
       </div>
     </div>
     <div class="contain-category category-news">
@@ -31,9 +40,14 @@
   <div class="col-md-12 clear-col-margin">
     <div class="wraper-header clear-col-margin">
       <div class="header-category">
-        <span class="fa fa-desktop"></span>
-        <%= t "tab_bar.computer" %>
-        <span class="fa fa-chevron-up pull-right cursor" id="hide-show-computer"></span>
+        <%= link_to category_path(2) do %>
+          <span class="fa fa-desktop"></span>
+          <%= t "tab_bar.computer" %>
+        <% end %>
+        <span class="fa fa-chevron-up cursor arrow-position" id="hide-show-computer"></span>
+        <%= link_to category_path(2), class: "pull-right more-article" do %>
+          <i><%= t "label.more_article" %></i>
+        <% end %>
       </div>
     </div>
     <div class="contain-category category-computer">
@@ -45,9 +59,14 @@
   <div class="col-md-12 clear-col-margin">
     <div class="wraper-header clear-col-margin">
       <div class="header-category">
-        <span class="fa fa-tablet"></span>
-        <%= t "tab_bar.mobile" %>
-        <span class="fa fa-chevron-up pull-right cursor" id="hide-show-mobile"></span>
+        <%= link_to category_path(3) do %>
+          <span class="fa fa-tablet"></span>
+          <%= t "tab_bar.mobile" %>
+        <% end %>
+        <span class="fa fa-chevron-up cursor arrow-position" id="hide-show-mobile"></span>
+        <%= link_to category_path(3), class: "pull-right more-article" do %>
+          <i><%= t "label.more_article" %></i>
+        <% end %>
       </div>
     </div>
     <div class="contain-category category-mobile">
@@ -59,9 +78,14 @@
   <div class="col-md-12 clear-col-margin">
     <div class="wraper-header clear-col-margin">
       <div class="header-category">
-        <span class="fa fa-book"></span>
-        <%= t "tab_bar.more_knowledge" %>
-        <span class="fa fa-chevron-up pull-right cursor" id="hide-show-more-knowledge"></span>
+        <%= link_to category_path(4) do %>
+          <span class="fa fa-book"></span>
+          <%= t "tab_bar.more_knowledge" %>
+        <% end %>
+        <span class="fa fa-chevron-up cursor arrow-position" id="hide-show-more-knowledge"></span>
+        <%= link_to category_path(4), class: "pull-right more-article" do %>
+          <i><%= t "label.more_article" %></i>
+        <% end %>
       </div>
     </div>
     <div class="contain-category category-more-knowledge">
@@ -73,9 +97,14 @@
   <div class="col-md-12 clear-col-margin margin-bottom-category">
     <div class="wraper-header clear-col-margin">
       <div class="header-category">
-        <span class="fa fa-pie-chart"></span>
-        <%= t "tab_bar.electronic_device" %>
-        <span class="fa fa-chevron-up pull-right cursor" id="hide-show-popular-article"></span>
+        <%= link_to category_path(5) do %>
+          <span class="fa fa-pie-chart"></span>
+          <%= t "tab_bar.electronic_device" %>
+        <% end %>
+        <span class="fa fa-chevron-up cursor arrow-position" id="hide-show-popular-article"></span>
+         <%= link_to category_path(5), class: "pull-right more-article" do %>
+          <i><%= t "label.more_article" %></i>
+        <% end %>
       </div>
     </div>
     <div class="contain-category category-popular-article">

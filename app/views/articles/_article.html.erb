@@ -9,7 +9,7 @@
       <h3><%= truncate(article.title, length: 80) %></h3>
     <% end %>
     <div class="description">
-      <%= truncate(article.description, length: 230) %>
+      <%= truncate(sanitize(article.description, tags: []), length: 230) %>
       <%= link_to t("articles.labels.read_more"), article_path(article), class: "label label-warning" %>
     </div>
   </div>

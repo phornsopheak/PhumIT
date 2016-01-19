@@ -1,6 +1,6 @@
 FactoryGirl.define do
   factory :article do
-    title {Faker::Lorem.sentences}
+    title "aa"
     description {Faker::Lorem.paragraphs}
     view {Faker::Number.number(3)}
     source {Faker::Company.name}

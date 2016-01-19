@@ -1,0 +1,102 @@
+/*
+*= require_self .
+*/
+
+.badge-warning {
+  background: orange;
+}
+
+.text-link {
+  color: #333333;
+  a:hover {
+    text-decoration: none;
+  }
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.padding-right-icon {
+  padding-right: 10px;
+  color: orange;
+}
+
+.container-fluid .navbar-brand {
+  margin-left: -15px;
+  color: white;
+  font-weight: bold;
+}
+
+.container-fluid a:hover .navbar-brand {
+  color: red;
+}
+
+.navbar-default {
+  background-color: #3A53A4;
+  border-color: #e7e7e7;
+}
+
+.navbar-default .navbar-nav > li > a {
+  color: white;
+}
+
+.navbar-default .navbar-nav > li {
+
+  a:hover {
+    background: rgba(0, 0, 0, 0.1);
+    color: white;
+  }
+
+  a:focus {
+    background: rgba(0, 0, 0, 0.1);
+    color: white;
+  }
+}
+
+.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.navbar-inner {
+  background-image: image_url('app_icon.png');
+  background-size: 100px 100px; // put your own sizes here
+  background-repeat: no-repeat;
+}
+
+.brand {
+  display: none !important; //get rid of the text
+}
+
+img.img-profile {
+  width: 30px;
+  height: 60%;
+}
+
+@media screen and (min-width: 768px) {
+  body.rails_admin .sidebar-nav {
+      position: fixed;
+      top: 50px;
+      bottom: 0;
+      overflow-y: auto;
+      border-right: 2px solid whitesmoke;
+  }
+}
+
+.show-user {
+  margin-bottom: 20px;
+
+  img {
+    height: 100px;
+    width: 100px;
+  }
+
+  .margin-top-col {
+    margin-top: 20px;
+  }
+
+  .clear-padding {
+    padding: 0px;
+  }
+}

@@ -1,4 +1,8 @@
 class StaticPageController < ApplicationController
+  def about_us
+
+  end
+
   def home
     @articles = Article.all.limit 9
     @news = Category.first

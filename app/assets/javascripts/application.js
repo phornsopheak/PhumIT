@@ -3,12 +3,23 @@
 //= require turbolinks
 //= require bootstrap
 //= require nprogress
+//= require toastr
+//= require ckeditor/init
 //= require nprogress-turbolinks
 //= require_tree .
 
 
 $(document).ready(function(){
   resizeSearchBox();
+
+  setTimeout(function() {
+    $(".hide-flash").fadeOut("normal");
+  }, 3000);
+
+  setTimeout(function() {
+    $(".alert").fadeOut("normal");
+  }, 3000);
+
 
   $(window).scroll(function(){
     if ($(this).scrollTop() > 100) {
@@ -30,9 +41,17 @@ $(document).on("page:update", function(){
   fbPageLoad();
   $('[data-toggle="tooltip"]').tooltip();
   $('[data-toggle="popover"]').popover({ html : true });
+
+  setTimeout(function() {
+    $(".alert").fadeOut("normal");
+  }, 3000);
 });
 
 $(document).on("page:changed", function(){
+  fbPageLoad();
+});
+
+$(document).on("page:load", function(){
   fbPageLoad();
 });
 
