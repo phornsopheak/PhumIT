@@ -96,22 +96,17 @@
         }
 
         .description-article-side-bar {
-          height: 70px;
+          height: 100px;
           margin: 0px 0px 0px 5px;
           position: absolute;
           word-wrap: break-word;
           overflow: hidden;
+          width: 55%;
+          padding-right: 5px;
 
           h5 {
             font-weight: bold;
           }
-        }
-
-        .time-article-side-bar {
-          margin: 70px 0px 0px 5px;
-          position: absolute;
-          height: 20px;
-          color: #333333;
         }
 
         h5 {

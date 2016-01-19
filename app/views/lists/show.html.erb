@@ -1,7 +1,13 @@
 <% provide :title, @list.title %>
-<div class="list article">
+<div class="list article home">
   <div class="col-md-12 clear-padding-col">
     <div class="col-md-8">
+      <div class="wraper-header clear-col-margin">
+        <div class="header-category">
+          <span class="fa fa-list"></span>
+          <%= check_title %>
+        </div>
+      </div>
       <div class="content-list">
        <%= render @articles %>
        <div class="paginate"><%= paginate @articles, theme: "twitter-bootstrap-3", pagination_class: "pagination-small" %></div>

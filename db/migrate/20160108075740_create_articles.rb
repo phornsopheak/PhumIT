@@ -4,7 +4,8 @@ class CreateArticles < ActiveRecord::Migration
       t.text :title
       t.text :description
       t.integer :view
-      t.text :source
+      t.string :source
+      t.string :link_source
       t.string :image
 
       t.timestamps null: false

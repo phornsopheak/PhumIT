@@ -1,7 +1,7 @@
 en:
   headers:
     title: "Phum IT"
-    collection_article: "អត្ថបទ"
+    search_result: "លទ្ធផលស្វែងរក"
   tab_bar:
     home: "ទំព័រដើម"
     computer: "កុំព្យូទ័រ"
@@ -28,6 +28,11 @@ en:
     connect_us: "ទាក់ទងយើង"
     advertise: "ផ្សាយពាណិជ្ជកម្ម"
   label:
-    more_article: ""
-    search_for: "ស្វែងរក..."
+    more_article: "បន្ថែមទៀត"
+    search_for: "ស្វែងរកអត្ថបទ..."
     go: "Go!"
+    sign_in: "បញ្ចូលគណនី"
+    password: "លេខសំងាត់"
+    email: "អ៊ីម៉ែល"
+    remember: "ចងចាំ"
+

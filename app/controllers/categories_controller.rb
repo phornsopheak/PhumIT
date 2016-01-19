@@ -1,4 +1,5 @@
 class CategoriesController < ApplicationController
+before_action :authenticate_user!, except: [:show, :index]
 
   def show
     @category = Category.find params[:id]

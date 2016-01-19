@@ -20,6 +20,7 @@ default: &default
 development:
   <<: *default
   database: web_teach_development
+  strict: false
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -52,3 +53,4 @@ production:
   database: web_teach_production
   username: web_teach
   password: <%= ENV['WEB_TEACH_DATABASE_PASSWORD'] %>
+  strict: false

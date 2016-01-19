@@ -3,14 +3,7 @@
     <div class="col-md-3 main-article-show">
       <%= image_tag @articles.first.image_url, class: "main-imag" %>
       <div class="main-show-description hvr-shutter-out-horizontal">
-        <h3><%= truncate(@articles.first.title, length: 80) %></h3>
-        <div class="main-show-user-show hvr-sweep-to-top">
-          <span class="fa fa-calendar"></span>&nbsp;
-          <%= @articles.first.created_at.strftime("%Y-%m-%d %I:%M:%S %p") %>
-          <span class="pull-right">&nbsp;
-          <%= @articles.first.view %></span>
-          <span class="fa fa-eye pull-right"></span>
-        </div>
+        <h3><%= truncate(@articles.first.title, length: 90) %></h3>
       </div>
     </div>
   <% end %>
@@ -20,13 +13,7 @@
         <div class="aa bb">
           <%= image_tag @articles.second.image_url %>
           <div class="sub-show-description hvr-shutter-out-horizontal">
-            <h3><%= truncate(@articles.second.title, length: 60) %></h3>
-            <div class="sub-show-user-show hvr-sweep-to-top">
-              <span class="fa fa-calendar"></span>&nbsp;
-              <%= @articles.second.created_at.strftime("%Y-%m-%d %I:%M:%S %p") %>
-              <span class="pull-right">&nbsp;12345</span>
-              <span class="fa fa-eye pull-right"></span>
-            </div>
+            <h3><%= truncate(@articles.second.title, length: 80) %></h3>
           </div>
         </div>
       </div>
@@ -36,13 +23,7 @@
         <div class="aa">
           <%= image_tag @articles.third.image_url %>
           <div class="sub-show-description hvr-shutter-out-horizontal">
-            <h3><%= truncate(@articles.third.title, length: 60) %> </h3>
-            <div class="sub-show-user-show hvr-sweep-to-top">
-              <span class="fa fa-calendar"></span>&nbsp;
-              <%= @articles.third.created_at.strftime("%Y-%m-%d %I:%M:%S %p") %>
-              <span class="pull-right">&nbsp;12345</span>
-              <span class="fa fa-eye pull-right"></span>
-            </div>
+            <h3><%= truncate(@articles.third.title, length: 80) %> </h3>
           </div>
         </div>
       </div>
@@ -52,13 +33,7 @@
         <div class="aa">
           <%= image_tag @articles.fourth.image_url %>
           <div class="sub-show-description hvr-shutter-out-horizontal">
-            <h3><%= truncate(@articles.fourth.title, length: 60) %></h3>
-            <div class="sub-show-user-show hvr-sweep-to-top">
-              <span class="fa fa-calendar"></span>&nbsp;
-              <%= @articles.fourth.created_at.strftime("%Y-%m-%d %I:%M:%S %p") %>
-              <span class="pull-right">&nbsp;12345</span>
-              <span class="fa fa-eye pull-right"></span>
-            </div>
+            <h3><%= truncate(@articles.fourth.title, length: 80) %></h3>
           </div>
         </div>
       </div>
@@ -68,13 +43,7 @@
         <div class="aa">
           <%= image_tag @articles.fifth.image_url %>
           <div class="sub-show-description hvr-shutter-out-horizontal">
-            <h3><%= truncate(@articles.fifth.title, length: 60) %></h3>
-            <div class="sub-show-user-show hvr-sweep-to-top">
-              <span class="fa fa-calendar"></span>&nbsp;
-              <%= @articles.fifth.created_at.strftime("%Y-%m-%d %I:%M:%S %p") %>
-              <span class="pull-right">&nbsp;12345</span>
-              <span class="fa fa-eye pull-right"></span>
-            </div>
+            <h3><%= truncate(@articles.fifth.title, length: 80) %></h3>
           </div>
         </div>
       </div>
@@ -87,13 +56,7 @@
         <div class="aa">
           <%= image_tag @articles[5].image_url %>
           <div class="sub-show-description hvr-shutter-out-horizontal">
-            <h3><%= truncate(@articles[5].title, length: 60) %></h3>
-            <div class="sub-show-user-show hvr-sweep-to-top">
-              <span class="fa fa-calendar"></span>&nbsp;
-              <%= @articles[5].created_at.strftime("%Y-%m-%d %I:%M:%S %p") %>
-              <span class="pull-right">&nbsp;12345</span>
-              <span class="fa fa-eye pull-right"></span>
-            </div>
+            <h3><%= truncate(@articles[5].title, length: 80) %></h3>
           </div>
         </div>
       </div>
@@ -101,15 +64,9 @@
     <%= link_to article_path(@articles[6]) do %>
       <div class="col-md-3 sub-article-show-line2">
         <div class="aa">
-          <%= image_tag "window.jpg" %>
+          <%= image_tag @articles[6].image_url %>
           <div class="sub-show-description hvr-shutter-out-horizontal">
-            <h3><%= truncate(@articles[6].title, length: 60) %></h3>
-            <div class="sub-show-user-show hvr-sweep-to-top">
-              <span class="fa fa-pencil"></span>&nbsp;
-              <%= @articles[6].created_at.strftime("%Y-%m-%d %I:%M:%S %p") %>
-              <span class="pull-right">&nbsp;12345</span>
-              <span class="fa fa-eye pull-right"></span>
-            </div>
+            <h3><%= truncate(@articles[6].title, length: 80) %></h3>
           </div>
         </div>
       </div>
@@ -117,15 +74,9 @@
     <%= link_to article_path(@articles[7]) do %>
       <div class="col-md-3 sub-article-show-line2">
         <div class="aa">
-          <%= image_tag "sumsung.jpg" %>
+          <%= image_tag @articles[7].image_url %>
           <div class="sub-show-description hvr-shutter-out-horizontal">
-            <h3><%= truncate(@articles[7].title, length: 60) %></h3>
-            <div class="sub-show-user-show hvr-sweep-to-top">
-              <span class="fa fa-pencil"></span>&nbsp;
-              <%= @articles[7].created_at.strftime("%Y-%m-%d %I:%M:%S %p") %>
-              <span class="pull-right">&nbsp;12345</span>
-              <span class="fa fa-eye pull-right"></span>
-            </div>
+            <h3><%= truncate(@articles[7].title, length: 80) %></h3>
           </div>
         </div>
       </div>
@@ -133,15 +84,9 @@
     <%= link_to article_path(@articles[8]) do %>
       <div class="col-md-3 sub-article-show-line2">
         <div class="aa">
-          <%= image_tag "game.jpg" %>
+          <%= image_tag @articles[8].image_url %>
           <div class="sub-show-description hvr-shutter-out-horizontal">
-            <h3><%= truncate(@articles[8].title, length: 60) %></h3>
-            <div class="sub-show-user-show hvr-sweep-to-top">
-              <span class="fa fa-pencil"></span>&nbsp;
-              <%= @articles[8].created_at.strftime("%Y-%m-%d %I:%M:%S %p") %>
-              <span class="pull-right">&nbsp;12345</span>
-              <span class="fa fa-eye pull-right"></span>
-            </div>
+            <h3><%= truncate(@articles[8].title, length: 80) %></h3>
           </div>
         </div>
       </div>

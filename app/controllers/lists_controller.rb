@@ -1,4 +1,5 @@
 class ListsController < ApplicationController
+  before_action :authenticate_user!, except: [:show, :index]
 
   def show
     @list = List.find params[:id]

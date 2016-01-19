@@ -1,22 +1,27 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title><%= full_title yield(:title) %></title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-  <%= favicon_link_tag 'app_icon.png' %>
-</head>
-<body>
-  <div id="wrapper">
-      <%= render "shared/header" %>
+  <head>
+    <title><%= full_title yield(:title) %></title>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+    <%= favicon_link_tag 'app_icon.png' %>
+  </head>
+  <body>
+    <div id="fb-root"></div>
+    <div id="wrapper">
       <%= render "shared/flash" %>
-      <div class="content container">
+      <% if params[:controller] != "devise/sessions" %>
+        <%= render "shared/header" %>
+        <div class="content container">
+          <%= yield %>
+        </div>
+        <%= render "shared/footer" %>
+        <a href="#" class="scrollToTop fa fa-arrow-circle-up fa-2x"></a>
+      <% else %>
         <%= yield %>
-      </div>
-      <%= render "shared/footer" %>
-      <a href="#" class="scrollToTop fa fa-arrow-circle-up fa-2x"></a>
-  </div>
-</body>
+      <% end %>
+    </div>
+  </body>
 </html>
