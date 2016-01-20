@@ -4,6 +4,7 @@
 //= require bootstrap
 //= require nprogress
 //= require toastr
+//= requitre jquery.clearsearch
 //= require ckeditor/init
 //= require nprogress-turbolinks
 //= require_tree .
@@ -39,6 +40,8 @@ $(document).on("page:update", function(){
   resizeSearchBox();
   hideShowCategory();
   fbPageLoad();
+  $('.width-text').clearSearch();
+  $(".search-nav").clearSearch();
   $('[data-toggle="tooltip"]').tooltip();
   $('[data-toggle="popover"]').popover({ html : true });
 

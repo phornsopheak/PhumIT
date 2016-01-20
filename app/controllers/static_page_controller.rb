@@ -1,6 +1,6 @@
 class StaticPageController < ApplicationController
   def about_us
-
+    @categories = Category.all
   end
 
   def home

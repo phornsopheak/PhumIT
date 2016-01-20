@@ -23,6 +23,7 @@
 
   .description-box {
     margin: 15px 0px 15px 0px;
+    line-height: 27px;
   }
 
   .title {
@@ -56,6 +57,10 @@
 
     .color-link {
       color: #333333;
+    }
+
+    .height-col {
+      min-height: 80px;
     }
   }
 
@@ -117,6 +122,95 @@
         }
       }
     }
+  }
+
+  .sidebar-about-us {
+    padding: 0px;
+
+    .category-box {
+      margin-top: 10px;
+
+      .panel-footer {
+        padding: 10px 15px;
+        background-color: #eeeeee;
+        border-top: 1px solid #ddd;
+        border-bottom-right-radius: 0px;
+        border-bottom-left-radius: 0px;
+      }
+
+      .panel-heading {
+        padding: 10px 15px;
+        border-bottom: 1px solid transparent;
+        border-top-right-radius: 0px;
+        border-top-left-radius: 0px;
+
+        a {
+          color: #FFFFFF;
+          text-decoration: none;
+        }
+      }
+
+      .panel {
+        margin-bottom: 10px;
+        background-color: #fff;
+        border-radius: 0px;
+        -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+      }
+
+      .panel-danger > .panel-heading {
+        color: white;
+        background-color: #E84A4A;
+        border-color: #E84A4A;
+      }
+
+      .panel-success > .panel-heading {
+        color: #eeeeee;
+        background-color: #48BD18;
+        border-color: #48BD18;
+      }
+
+      .panel-info > .panel-heading {
+        color: white;
+        background-color: #05BFB7;
+        border-color: #05BFB7;
+      }
+
+      .panel-warning > .panel-heading {
+        color: white;
+        background-color: #F1D43E;
+        border-color: #F1D43E;
+      }
+
+      .panel-success, .panel-danger, .panel-info, .panel-warning, .panel-primary {
+        border-color: transparent;
+      }
+    }
+  }
+
+  .top-alert {
+    margin-top: 20px;
+    word-break: break-word;
+  }
+
+  .alert {
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 0px;
+  }
+
+  .alert-danger {
+    background-color: #f2dede;
+    border-color: #ebccd1;
+    color: #EB4335;
+  }
+
+  .alert-dismissable .close, .alert-dismissible .close {
+    position: relative;
+    top: -2px;
+    right: 0px;
+    color: inherit;
   }
 
   .facebook-like-page {

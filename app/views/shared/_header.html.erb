@@ -17,7 +17,7 @@
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <%= search_form_for @q, class: "input-group navbar-form navbar-left search-navbar" do |f| %>
-          <%= f.search_field :title, class: "form-control", placeholder: t("label.search_for") %>
+          <%= f.search_field :title, class: "form-control search-nav", placeholder: t("label.search_for") %>
           <span class="input-group-btn">
             <%= f.submit t("label.go"), class: "btn btn-primary no-radius" %>
           </span>

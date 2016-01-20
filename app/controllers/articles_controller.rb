@@ -2,15 +2,14 @@ class ArticlesController < ApplicationController
   before_action :authenticate_user!, except: [:show, :index]
   before_action :find_article, except: :index
   before_action :update_number_of_view, only: :show
+  before_action :side_bar_for_index, only: :index
+  before_action :side_bar_for_show, only: :show
 
   def index
     @articles = @q.result.page(params[:page]).per(10)
   end
 
   def show
-    @category = @article.categories.first
-    @popular_articles = @category.articles.order(view: :desc).limit(4)
-    @relate_articles = @category.articles.limit(4)
   end
 
   private
@@ -21,5 +20,17 @@ class ArticlesController < ApplicationController
   def update_number_of_view
     view = @article.view.nil? ? 1 : @article.view + 1
     @article.update_attribute(:view, view)
+  end
+
+  def side_bar_for_index
+    @popular_articles = Article.all.order(view: :desc).limit(4)
+    @relate_articles = Article.all.limit(4)
+    @category = Category.first
+  end
+
+  def side_bar_for_show
+    @category = @article.categories.first
+    @popular_articles = @category.articles.order(view: :desc).limit(4)
+    @relate_articles = @category.articles.limit(4)
   end
 end

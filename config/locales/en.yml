@@ -35,4 +35,6 @@ en:
     password: "លេខសំងាត់"
     email: "អ៊ីម៉ែល"
     remember: "ចងចាំ"
+    danger: "សូមអភ័យទោស!"
+    inform_search: "ពមានលទ្ធផលសំរាប់ការស្វែងរក [%{params}] ទេ។"
 
