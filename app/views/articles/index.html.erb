@@ -8,17 +8,28 @@
           <%= check_title_article %>
         </div>
       </div>
+      <% if @articles.blank? %>
+        <div class="show alert alert-danger alert-dismissible top-alert">
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <strong><%= t "label.danger" %></strong>
+          <%= t "label.inform_search", params: params[:q][:title] %>
+        </div>
+      <% end %>
       <div class="content-list">
        <%= render @articles %>
        <div class="paginate"><%= paginate @articles, theme: "twitter-bootstrap-3", pagination_class: "pagination-small" %></div>
       </div>
     </div>
     <div class="col-md-4 side-bar facebook-like-page">
-      <%= render "articles/fb_page" %>
+    <%= render "fb_page" %>
     </div>
     <div class="col-md-4 side-bar">
+      <%= render "relate_side_bar" %>
     </div>
     <div class="col-md-4 side-bar">
+      <%= render "popular_side_bar" %>
     </div>
   </div>
 </div>
