@@ -30,6 +30,8 @@ gem "paperclip"
 gem "ckeditor"
 gem "mini_magick"
 gem "unicorn", "~> 5.0.1"
+gem "factory_girl_rails"
+gem "faker"
 
 gem "sdoc", "~> 0.4.0", group: :doc
 
