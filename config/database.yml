@@ -19,7 +19,7 @@ default: &default
 
 development:
   <<: *default
-  database: web_teach_development
+  database: web_teach_developer
   strict: false
 
 # Warning: The database defined as "test" will be erased and
@@ -51,6 +51,6 @@ test:
 production:
   <<: *default
   database: web_teach_production
-  username: web_teach
+  username: root
   password: <%= ENV['WEB_TEACH_DATABASE_PASSWORD'] %>
   strict: false
