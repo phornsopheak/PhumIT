@@ -29,6 +29,7 @@ gem "rails_admin_jcrop"
 gem "paperclip"
 gem "ckeditor"
 gem "mini_magick"
+gem "unicorn", "~> 5.0.1"
 
 gem "sdoc", "~> 0.4.0", group: :doc
 
