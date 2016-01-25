@@ -2,11 +2,19 @@
 <html>
   <head>
     <title><%= full_title yield(:title) %></title>
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <meta name="description" content="talking about teachnology in cambodia.">
+    <meta name="keywords" content="IT, information teachnology, teachnology, teachnology khmer, cambodia, computer, phone, sumsung, smartphone, teach, modern, khmer phone, khmer computer, camera, news, computer tips, phone tips, android, ios, windows phone, windows, linux, cell phone">
+    <%= stylesheet_link_tag    'application', media: 'all' %>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
     <%= favicon_link_tag 'app_icon.png' %>
+
+    <meta property="fb:app_id" content="918872404865096">
+    <meta property="og:title" content="Phum IT">
+    <meta property="og:description" content="">
+    <meta property="og:url" content="<%= request.original_url %>">
+
   </head>
   <body>
     <div id="fb-root"></div>

@@ -13,27 +13,51 @@ module RailsAdminArticle
         field :description, :ck_editor
         field :source
         field :link_source
+        field :state
+        field :user do
+          pretty_value do
+            "sdsd"
+          end
+        end
       end
 
       list do
-         include_all_fields
+         field :id do
+          pretty_value do
+            %{<div class="badge">#{value}</div >}.html_safe
+          end
+         end
          field :title do
           formatted_value do
             bindings[:view].content_tag(:a, "#{value}",
               href: "article/#{bindings[:object].id}")
           end
          end
-         field :description do
+         field :image
+         field :user do
           pretty_value do
-            sanitize(value, tags: [])
+            value.username
           end
          end
-         field :created_at do
-          label "Publish at"
+         field :source do
+          formatted_value do
+            bindings[:view].content_tag(:a, %{<span class="fa fa-link">&nbsp;</span><span class="text-link">#{value}</sapn>}.html_safe,
+              target: "_blank", href: "#{bindings[:object].link_source}")
+          end
          end
-         field :id do
+         field :state do
           pretty_value do
-            %{<div class="badge">#{value}</div >}.html_safe
+            color = if value == 0
+              label = "Publish"
+              "success"
+            elsif value == 1
+              label = "Unpublish"
+              "danger"
+            else
+              label = "Draft"
+              "warning"
+            end
+            %{<div class="label label-#{color}">#{label}</div >}.html_safe
           end
          end
          field :view do
@@ -41,14 +65,11 @@ module RailsAdminArticle
             %{<div class="badge label badge-warning">#{value}</div >}.html_safe
           end
          end
-
-         field :source do
-          formatted_value do
-            bindings[:view].content_tag(:a, %{<span class="fa fa-link">&nbsp;</span><span class="text-link">#{value}</sapn>}.html_safe,
-              target: "_blank", href: "#{bindings[:object].link_source}")
-          end
+         field :created_at do
+          label "Publish at"
          end
-        exclude_fields :link_source, :updated_at, :category_articles, :list_articles
+         field :categories
+         field :lists
       end
     end
   end

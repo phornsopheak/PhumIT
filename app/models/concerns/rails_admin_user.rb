@@ -20,6 +20,15 @@ module RailsAdminUser
          field :nickname
          field :email
          field :image
+         field :role do
+          pretty_value do
+            if value == 0
+              %{<div class="label label-danger">Admin</div >}.html_safe
+            else
+              %{<div class="label label-info">Manager</div >}.html_safe
+            end
+          end
+         end
          field :sign_in_count do
           pretty_value do
             %{<div class="badge badge-warning">#{value}</div >}.html_safe
@@ -47,45 +56,14 @@ module RailsAdminUser
          field :updated_at
       end
 
-      show do
-         field :username
-         field :nickname
-         field :email
-         field :image
-         field :sign_in_count do
-            pretty_value do
-              %{<div class="badge label badge-warning">#{value}</div >}.html_safe
-            end
-         end
-         field :current_sign_in_at do
-          label "Current sign in"
-         end
-         field :last_sign_in_at do
-          label "Last sign in"
-         end
-         field :current_sign_in_ip do
-          label "Current IP"
-         end
-         field :last_sign_in_ip do
-           label "Last IP"
-         end
-         field :remember_created_at do
-            label "Remember at"
-         end
-         field :reset_password_sent_at do
-          label "Reset password at"
-         end
-         field :created_at
-         field :updated_at
-      end
-
       edit do
-         field :username
-         field :nickname
-         field :email
-         field :password
-         field :password_confirmation
-         field :image
+        field :username
+        field :nickname
+        field :email
+        field :password
+        field :password_confirmation
+        field :role
+        field :image
       end
     end
   end

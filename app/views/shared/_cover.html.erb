@@ -16,7 +16,7 @@
     <div class="width-form-group ">
       <div class="pull-right">
         <%= search_form_for @q, class: "input-group" do |f| %>
-          <%= f.search_field :title, class: "form-control width-text pull-right", placeholder: t("label.search_for"), "data-clear-btn" => "true" %>
+          <%= f.search_field :title_cont, class: "form-control width-text pull-right", placeholder: t("label.search_for"), "data-clear-btn" => "true" %>
           <span class="input-group-btn">
             <%= f.submit t("label.go"), class: "btn btn-primary no-radius" %>
           </span>

@@ -20,9 +20,13 @@ ActiveRecord::Schema.define(version: 20160116082917) do
     t.string   "source",      limit: 255
     t.string   "link_source", limit: 255
     t.string   "image",       limit: 255
-    t.datetime "created_at",                null: false
-    t.datetime "updated_at",                null: false
+    t.integer  "state",       limit: 4,     default: 2
+    t.integer  "user_id",     limit: 4
+    t.datetime "created_at",                            null: false
+    t.datetime "updated_at",                            null: false
   end
+
+  add_index "articles", ["user_id"], name: "index_articles_on_user_id", using: :btree
 
   create_table "categories", force: :cascade do |t|
     t.string   "title",       limit: 255
@@ -91,6 +95,7 @@ ActiveRecord::Schema.define(version: 20160116082917) do
     t.string   "username",               limit: 255
     t.string   "nickname",               limit: 255
     t.string   "image",                  limit: 255
+    t.integer  "role",                   limit: 4,   default: 1
     t.datetime "created_at",                                      null: false
     t.datetime "updated_at",                                      null: false
   end
@@ -108,11 +113,13 @@ ActiveRecord::Schema.define(version: 20160116082917) do
     t.string   "google_plus", limit: 255
     t.string   "tweatter",    limit: 255
     t.string   "youtube",     limit: 255
+    t.string   "instagram",   limit: 255
     t.text     "about_us",    limit: 65535
     t.datetime "created_at",                null: false
     t.datetime "updated_at",                null: false
   end
 
+  add_foreign_key "articles", "users"
   add_foreign_key "category_articles", "articles"
   add_foreign_key "category_articles", "categories"
   add_foreign_key "list_articles", "articles"

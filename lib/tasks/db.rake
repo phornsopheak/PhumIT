@@ -3,7 +3,10 @@ namespace :db do
   task remake_data: :environment do
     Rake::Task["db:migrate:reset"].invoke
 
-    puts "Creating user"
+    puts "Creating admin"
+    FactoryGirl.create :user, role: 0
+
+    puts "Creating manger"
     5.times {FactoryGirl.create :user}
 
     puts "Creating web detail"

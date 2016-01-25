@@ -10,6 +10,7 @@ class CreateWebDetails < ActiveRecord::Migration
       t.string :google_plus
       t.string :tweatter
       t.string :youtube
+      t.string :instagram
       t.text :about_us
 
       t.timestamps null: false
