@@ -22,6 +22,7 @@ class DeviseCreateUsers < ActiveRecord::Migration
       t.string :username
       t.string :nickname
       t.string :image
+      t.integer :role, default: 1
 
 
       t.timestamps null: false

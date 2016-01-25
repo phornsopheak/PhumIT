@@ -22,7 +22,7 @@
     padding: 8px;
 
     .arrow-position {
-      left: 250px;
+      left: 200px;
       position: absolute;
     }
 
@@ -47,11 +47,13 @@
     img {
       height: 100%;
       width: 100%;
+      object-fit: cover;
     }
 
     .main-imag {
       height: 100%;
       width: 100%;
+      object-fit: cover;
     }
 
     .main-article-show {
@@ -61,7 +63,7 @@
       .main-show-description {
         height: 40%;
         width: 100%;
-        background-color: rgba(0,0,0,.4);
+        background-color: rgba(0,0,0,.7);
         position: absolute;
         top: 60%;
         right: 0px;
@@ -97,7 +99,7 @@
             right: 0px;
             height: 40%;
             width: 95.5%;
-            background-color: rgba(0,0,0,.4);
+            background-color: rgba(0,0,0,.7);
             position: absolute;
 
             h3 {
@@ -128,7 +130,7 @@
             right: 0px;
             height: 40%;
             width: 95.5%;
-            background-color: rgba(0,0,0,.4);
+            background-color: rgba(0,0,0,.7);
             position: absolute;
 
             h3 {
@@ -155,7 +157,7 @@
   bottom: 0;
   left: 0;
   right: 0;
-  background: rgba(0,0,0,.7);
+  background: #3A53A4;
   -webkit-transform: scaleX(0);
   transform: scaleX(0);
   -webkit-transform-origin: 50%;
@@ -181,6 +183,7 @@
       img {
         height: 100%;
         width: 50%;
+        object-fit: cover;
       }
 
       .sub-article-list-show {
@@ -199,7 +202,7 @@
             .sub-show-description {
               height: 100%;
               width: 50%;
-              background-color: rgba(0, 0, 0, 0.4);
+              background-color: rgba(0, 0, 0, 0.7);
               float: right;
               bottom: 0px;
               position: relative;

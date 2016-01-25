@@ -3,9 +3,9 @@ class ListsController < ApplicationController
 
   def show
     @list = List.find params[:id]
-    @articles = @list.articles.page(params[:page]).per(10)
+    @articles = @list.articles.where(state: 0).page(params[:page]).per(10)
     @category = @list.category
-    @popular_articles = @category.articles.order(view: :desc).limit(4)
-    @relate_articles = @category.articles.limit(4)
+    @popular_articles = @category.articles.where(state: 0).order(view: :desc).limit(4)
+    @relate_articles = @category.articles.where(state: 0).limit(4)
   end
 end

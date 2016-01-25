@@ -7,6 +7,8 @@ class CreateArticles < ActiveRecord::Migration
       t.string :source
       t.string :link_source
       t.string :image
+      t.integer :state, default: 2
+      t.references :user, index: true, foreign_key: true
 
       t.timestamps null: false
     end

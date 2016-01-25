@@ -33,6 +33,12 @@ module RailsAdminWebdetail
             %{<div class="badge">#{value}</div >}.html_safe
           end
          end
+        field :name do
+          formatted_value do
+            bindings[:view].content_tag(:a, "#{value}",
+              href: "web_detail/#{bindings[:object].id}")
+          end
+         end
         field :about_us do
           pretty_value do
             value.html_safe

@@ -1,7 +1,7 @@
 <div class="col-md-12 footer-article">
   <div class="col-md-4">
-    <%= image_tag "user.png", class: "img-circle" %>
-     &nbsp;ផន សុភក្រ័
+    <%= image_tag @article.user.image_url, class: "img-circle" %>
+     &nbsp;<%= @article.user.nickname %>
   </div>
   <div class="col-md-8 height-col">
     <div class="pull-right">

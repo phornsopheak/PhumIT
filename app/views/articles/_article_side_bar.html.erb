@@ -3,6 +3,10 @@
     <%= image_tag article_side_bar.image_url %>
     <span class="description-article-side-bar">
       <h5><%= truncate(article_side_bar.title, length: 70) %></h5>
+      <br />
+      <span class="date-time">
+        <span class="fa fa-calendar">&nbsp;<%= article_side_bar.created_at.strftime("%Y-%m-%d %I:%M %p") %></span>
+      </span>
     </span>
   </div>
 <% end %>

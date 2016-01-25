@@ -4,6 +4,8 @@ FactoryGirl.define do
     description {Faker::Lorem.paragraphs}
     view {Faker::Number.number(3)}
     source {Faker::Company.name}
+    user {User.all.sample}
+    state 0
 
     after(:create) do |article|
       FactoryGirl.create :list_article, article: article

@@ -1,6 +1,5 @@
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
 //= require bootstrap
 //= require nprogress
 //= require toastr
@@ -12,6 +11,18 @@
 
 $(document).ready(function(){
   resizeSearchBox();
+
+  hideShowCategory();
+  fbPageLoad();
+
+  $('.width-text').clearSearch();
+  $(".search-nav").clearSearch();
+  $('[data-toggle="tooltip"]').tooltip();
+  $('[data-toggle="popover"]').popover({ html : true });
+
+  setTimeout(function() {
+    $(".alert").fadeOut("normal");
+  }, 3000);
 
   setTimeout(function() {
     $(".hide-flash").fadeOut("normal");
@@ -36,35 +47,13 @@ $(document).ready(function(){
   });
 });
 
-$(document).on("page:update", function(){
-  resizeSearchBox();
-  hideShowCategory();
-  fbPageLoad();
-  $('.width-text').clearSearch();
-  $(".search-nav").clearSearch();
-  $('[data-toggle="tooltip"]').tooltip();
-  $('[data-toggle="popover"]').popover({ html : true });
-
-  setTimeout(function() {
-    $(".alert").fadeOut("normal");
-  }, 3000);
-});
-
-$(document).on("page:changed", function(){
-  fbPageLoad();
-});
-
-$(document).on("page:load", function(){
-  fbPageLoad();
-});
-
 function resizeSearchBox(){
   $(".width-text").click(function(){
     $(".width-text").animate({width: '300px'},"fast");
   });
 
   $(".width-text").blur(function(){
-    $(".width-text").animate({width: '150px'}, "fast");
+    $(".width-text").animate({width: '127px'}, "fast");
 
   });
 }

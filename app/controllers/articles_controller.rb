@@ -6,7 +6,7 @@ class ArticlesController < ApplicationController
   before_action :side_bar_for_show, only: :show
 
   def index
-    @articles = @q.result.page(params[:page]).per(10)
+    @articles = @q.result.where(state: 0).page(params[:page]).per(10)
   end
 
   def show
@@ -23,14 +23,14 @@ class ArticlesController < ApplicationController
   end
 
   def side_bar_for_index
-    @popular_articles = Article.all.order(view: :desc).limit(4)
-    @relate_articles = Article.all.limit(4)
+    @popular_articles = Article.where(state: 0).order(view: :desc).limit(4)
+    @relate_articles = Article.where(state: 0).limit(4)
     @category = Category.first
   end
 
   def side_bar_for_show
     @category = @article.categories.first
-    @popular_articles = @category.articles.order(view: :desc).limit(4)
-    @relate_articles = @category.articles.limit(4)
+    @popular_articles = @category.articles.where(state: 0).order(view: :desc).limit(4)
+    @relate_articles = @category.articles.where(state: 0).limit(4)
   end
 end
