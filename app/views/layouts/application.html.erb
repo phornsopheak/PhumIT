@@ -9,11 +9,13 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
     <%= favicon_link_tag 'app_icon.png' %>
-
-    <meta property="fb:app_id" content="918872404865096">
-    <meta property="og:title" content="Phum IT">
-    <meta property="og:description" content="">
-    <meta property="og:url" content="<%= request.original_url %>">
+    <% if (params[:controller] == "articles" && params[:action] == "show") %>
+      <meta property="fb:app_id" content="918872404865096">
+      <meta property="og:title" content="<%= @article.title %>">
+      <meta property="og:description" content="">
+      <meta property="og:image" content="<%= request.protocol + request.host_with_port + @article.image_url %>">
+      <meta property="og:url" content="<%= request.original_url %>" >
+    <% end %>
 
   </head>
   <body>
