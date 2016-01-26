@@ -94,4 +94,41 @@ module ApplicationHelper
       t("tab_bar.electronic_device")
     end
   end
+
+  def meta_share_fb
+    params_controller = params[:controller]
+    params_action = params[:action]
+    @obj = []
+    if params_controller == "articles"
+      if params_action == "show"
+        title = @article.title
+        description = @article.description
+        image = request.protocol + request.host_with_port + @article.image_url
+        url = request.original_url
+      else
+        url = request.original_url
+      end
+    elsif params_controller == "lists"
+      if params_action == "show"
+        title = @list.title
+        description = @list.description
+        image = request.protocol + request.host_with_port + @list.image_url
+        url = request.original_url
+      end
+    elsif params_controller == "categories"
+      if params_action == "show"
+        title = @category.title
+        description = @category.description
+        image = request.protocol + request.host_with_port + @category.image_url
+        url = request.original_url
+      end
+    else
+      url = request.original_url
+    end
+    @obj << {title: title,
+             description: sanitize(description, tags: []),
+             image: image,
+             url: url
+            }
+  end
 end
