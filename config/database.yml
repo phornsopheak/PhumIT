@@ -14,12 +14,12 @@ default: &default
   encoding: utf8
   pool: 5
   username: root
-  password: <%= ENV['PASSWORD_DATA_LOCAL'] %>
+  password:
   socket: /var/run/mysqld/mysqld.sock
 
 development:
   <<: *default
-  database: web_teach_developer
+  database: web_teach_development
   strict: false
 
 # Warning: The database defined as "test" will be erased and

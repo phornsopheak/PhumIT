@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   root "static_page#home"
   get "/about_us", to: "static_page#about_us"
 
-  resources :categories
-  resources :lists
-  resources :articles
+  resources :categories, only: [:show]
+  resources :lists, only: [:show]
+  resources :articles, only: [:show, :index]
 end
