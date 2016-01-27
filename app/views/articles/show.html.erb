@@ -9,7 +9,13 @@
           &nbsp;<%= @article.created_at.strftime("%Y-%m-%d %I:%M %p") %>|
           <span class="fa fa-eye"></span>
           <%= @article.view %>|
-          <span class="fb-like" data-href="<%= request.original_url %>" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></span>
+          <span class="action">
+            <span>
+              <g:plus action="share" annotation="bubble"></g:plus>
+            </span>
+            <a href="https://twitter.com/share" class="twitter-share-button"{count} data-via="Phum_IT">Tweet</a>
+            <span class="fb-like action-share" data-href="<%= request.original_url %>" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true" data-class="aa"></span>
+          </span>
         </div>
       </div>
       <%= image_tag @article.image_url %>
