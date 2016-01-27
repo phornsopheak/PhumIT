@@ -1,5 +1,4 @@
 class Article < ActiveRecord::Base
-  before_create :user_to_article
   default_scope { order("id DESC") }
 
   include RailsAdminArticle
@@ -16,9 +15,4 @@ class Article < ActiveRecord::Base
   validates :title, presence: true
   validates :description, presence: true
   validates :source, presence: true
-
-  private
-    def user_to_article
-      self.user_id = 1
-    end
 end

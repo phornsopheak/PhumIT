@@ -28,6 +28,7 @@ module RailsAdminList
           end
          end
          field :description
+         field :image
          field :created_at do
           label "Publish at"
          end

@@ -10,22 +10,26 @@
       <div class="col-md-4">
         <ul class="list-unstyled display-inline">
           <li>
-            <%= link_to root_path, class: "fa fa-home" do %>
+            <%= link_to root_path do %>
+              <span class="fa fa-home"></span>
               <span >&nbsp;&nbsp;<%= t "tab_bar.home" %></span>
             <% end %>
           </li>
           <li>
-            <%= link_to category_path(1), class: "fa fa-newspaper-o" do %>
+            <%= link_to category_path(1) do %>
+              <span class="fa fa-newspaper-o"></span>
               <span>&nbsp;&nbsp;<%= t "tab_bar.news" %></span>
             <% end %>
           </li>
           <li>
-            <%= link_to category_path(4), class: "fa fa-book" do %>
+            <%= link_to category_path(4) do %>
+              <span class="fa fa-book"></span>
               <span>&nbsp;&nbsp;<%= t "tab_bar.more_knowledge" %></span>
             <% end %>
           </li>
           <li>
-            <%= link_to category_path(5), class: "fa fa-pie-chart" do %>
+            <%= link_to category_path(5) do %>
+              <span class="fa fa-pie-chart"></span>
               <span>&nbsp;&nbsp;<%= t "tab_bar.electronic_device" %></span>
             <% end %>
           </li>
@@ -34,27 +38,32 @@
       <div class="col-md-4">
         <ul class="list-unstyled display-inline">
           <li>
-            <%= link_to category_path(2), class: "fa fa-laptop" do %>
+            <%= link_to category_path(2) do %>
+              <span class="fa fa-laptop"></span>
               <span>&nbsp;&nbsp;<%= t "tab_bar.computer" %></span>
             <% end %>
           </li>
             <li>
-              <%= link_to list_path(1), class: "fa fa-windows" do %>
+              <%= link_to list_path(1) do %>
+                <span class="fa fa-windows"></span>
                 <span>&nbsp;&nbsp;<%= t "sub_tab_bar.computer.operation_system" %></span>
               <% end %>
             </li>
             <li>
-              <%= link_to list_path(2), class: "fa fa-hdd-o" do %>
+              <%= link_to list_path(2) do %>
+                <span class="fa fa-hdd-o"></span>
                 <span>&nbsp;&nbsp;<%= t "sub_tab_bar.computer.hardware" %></span>
               <% end %>
             </li>
             <li>
-              <%= link_to list_path(3), class: "fa fa-recycle" do %>
+              <%= link_to list_path(3) do %>
+                <span class="fa fa-recycle"></span>
                 <span>&nbsp;&nbsp;<%= t "sub_tab_bar.computer.software" %></span>
               <% end %>
             </li>
             <li>
-              <%= link_to list_path(4), class: "fa fa-lightbulb-o" do %>
+              <%= link_to list_path(4) do %>
+                <span class="fa fa-lightbulb-o"></span>
                 <span>&nbsp;&nbsp;<%= t "sub_tab_bar.computer.tip_computer" %></span>
               <% end %>
             </li>
@@ -64,27 +73,32 @@
       <div class="col-md-4">
         <ul class="list-unstyled display-inline">
           <li>
-            <%= link_to category_path(3), class: "fa fa-tablet" do %>
+            <%= link_to category_path(3) do %>
+              <span class="fa fa-tablet"></span>
               <span>&nbsp;&nbsp;<%= t "tab_bar.mobile" %></span>
             <% end %>
            </li>
             <li>
-              <%= link_to list_path(5), class: "fa fa-th-large" do %>
+              <%= link_to list_path(5) do %>
+                <span class="fa fa-th-large"></span>
                 <span>&nbsp;&nbsp;<%= t "sub_tab_bar.mobile.window_phone" %></span>
               <% end %>
             </li>
             <li>
-              <%= link_to list_path(6), class: "fa fa-android" do %>
+              <%= link_to list_path(6) do %>
+                <span class="fa fa-android"></span>
                 <span>&nbsp;&nbsp;<%= t "sub_tab_bar.mobile.android" %></span>
               <% end %>
             </li>
             <li>
-              <%= link_to list_path(7), class: "fa fa-apple" do %>
+              <%= link_to list_path(7) do %>
+                <span class="fa fa-apple"></span>
                 <span>&nbsp;&nbsp;<%= t "sub_tab_bar.mobile.ios" %></span>
               <% end %>
             </li>
             <li>
-              <%= link_to list_path(8), class: "fa fa-lightbulb-o" do %>
+              <%= link_to list_path(8) do %>
+                <span class="fa fa-lightbulb-o"></span>
                 <span>&nbsp;&nbsp;<%= t "sub_tab_bar.mobile.tip_mobile" %></span>
               <% end %>
             </li>
@@ -94,17 +108,20 @@
     <div class="col-md-2">
       <ul class="list-unstyled display-inline">
         <li>
-          <%= link_to about_us_path, class: "fa fa-info-circle" do %>
-            <span><%= t "tab_bar.about_us" %></span>
+          <%= link_to about_us_path do %>
+            <span class="fa fa-info-circle"></span>
+            <span>&nbsp;&nbsp;<%= t "tab_bar.about_us" %></span>
           <% end %>
         </li>
         <li>
-          <%= link_to "#", class: "fa fa-phone" do %>
+          <%= link_to "#" do %>
+            <span class="fa fa-phone"></span>
             <span>&nbsp;&nbsp;<%= t "bottom_tab_bar.connect_us" %></span>
           <% end %>
         </li>
         <li>
-          <%= link_to "#", class: "fa fa-suitcase" do %>
+          <%= link_to "#" do %>
+            <span class="fa fa-suitcase"></span>
             <span>&nbsp;&nbsp;<%= t "bottom_tab_bar.advertise" %></span>
           <% end %>
         </li>

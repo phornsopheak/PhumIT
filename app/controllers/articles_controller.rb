@@ -23,14 +23,14 @@ class ArticlesController < ApplicationController
   end
 
   def side_bar_for_index
-    @popular_articles = Article.where(state: 0).order(view: :desc).limit(4)
+    @popular_articles = Article.unscoped.where(state: 0).order(view: :desc).limit(4)
     @relate_articles = Article.where(state: 0).limit(4)
     @category = Category.first
   end
 
   def side_bar_for_show
     @category = @article.categories.first
-    @popular_articles = @category.articles.where(state: 0).order(view: :desc).limit(4)
+    @popular_articles = @category.articles.unscoped.where(state: 0).order(view: :desc).limit(4)
     @relate_articles = @category.articles.where(state: 0).limit(4)
   end
 end

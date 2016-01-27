@@ -14,11 +14,7 @@ module RailsAdminArticle
         field :source
         field :link_source
         field :state
-        field :user do
-          pretty_value do
-            "sdsd"
-          end
-        end
+        field :user
       end
 
       list do
