@@ -11,12 +11,12 @@ pid "/home/movie_system/tmp/pids/unicorn.pid"
 # Path to logs
 # stderr_path "/path/to/log/unicorn.log"
 # stdout_path "/path/to/log/unicorn.log"
-stderr_path "/home/movie_system/log/unicorn.log"
-stdout_path "/home/movie_system/log/unicorn.log"
+stderr_path "/home/PhumIT/log/unicorn.log"
+stdout_path "/home/PhumIT/log/unicorn.log"
 
 # Unicorn socket
 # listen "/tmp/unicorn.[application name].sock"
-listen "/tmp/unicorn.movie_system.sock"
+listen "/tmp/unicorn.PhumIT.sock"
 
 # Number of processes
 # worker_processes 4

@@ -62,7 +62,6 @@ module RailsAdminUser
         field :email
         field :password
         field :password_confirmation
-        field :role
         field :image
       end
     end

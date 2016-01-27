@@ -14,7 +14,7 @@
       <span class="fa fa-eye"></span>
       <%= article.view %>|
       <span class="fa fa-user"></span>
-      <%= article.user.username %>
+      <%= article.user.nickname %>
     </div>
     <div class="description">
       <%= truncate(sanitize(article.description, tags: []), length: 230) %>
