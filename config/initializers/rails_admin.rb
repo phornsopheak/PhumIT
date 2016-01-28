@@ -7,6 +7,14 @@ RailsAdmin.config do |config|
 
   config.navigation_static_label = "Social Network"
 
+  config.navigation_static_links = {
+    %{<div class="fa fa-facebook-square fa-2x" style="color: #3b5998;"></div>&nbsp;Facebook}.html_safe => WebDetail.first.fb_page,
+    %{<div class="fa fa-twitter-square fa-2x" style="color: #55acee;"></div>&nbsp;Tweatter}.html_safe => WebDetail.first.tweatter,
+    %{<div class="fa fa-google-plus-square fa-2x" style="color: #dc4e41;"></div>&nbsp;Google+}.html_safe => WebDetail.first.google_plus,
+    %{<div class="fa fa-instagram fa-2x" style="color: #cd201f;"></div>&nbsp;Youtube}.html_safe => WebDetail.first.instagram,
+    %{<div class="fa fa-youtube-square fa-2x" style="color: #cd201f;"></div>&nbsp;Youtube}.html_safe => WebDetail.first.youtube
+  }
+
   ## == Devise ==
    config.authenticate_with do
       warden.authenticate! scope: :user
