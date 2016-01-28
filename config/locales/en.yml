@@ -5,11 +5,11 @@ en:
   tab_bar:
     home: "ទំព័រដើម"
     computer: "កុំព្យូទ័រ"
-    mobile: "ទូរស័ព្ទ"
+    mobile: "ទូរសព្ទ"
     more_knowledge: "ចំណេះដឹងផ្សេងៗ"
     news: "ព័ត៌មាន"
     about_us: " អំពីយើង"
-    electronic_device: "ឧបករណ៍អេឡិតត្រូនិច"
+    electronic_device: "ឧបករណ៍អេឡិចត្រូនិច"
     all_articles: "អត្ថបទថ្មីៗ"
   sub_tab_bar:
     computer:
@@ -21,7 +21,7 @@ en:
       window_phone: "Windows Phone"
       android: "Android"
       ios: "iOS"
-      tip_mobile: "គន្លឹះទូរស័ព្ទ"
+      tip_mobile: "គន្លឹះទូរសព្ទ"
     tips:
      more_tip: "គន្លឹះផ្សេងៗ"
   bottom_tab_bar:
@@ -37,4 +37,5 @@ en:
     remember: "ចងចាំ"
     danger: "សូមអភ័យទោស!"
     inform_search: "ពមានលទ្ធផលសំរាប់ការស្វែងរក [%{params}] ទេ។"
+    follow_us: "តាមដានភូមិអាយធីតាមរយៈ ៖"
 

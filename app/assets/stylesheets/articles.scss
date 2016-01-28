@@ -43,7 +43,7 @@
     height: auto;
     margin-bottom: 10px;
     border-top: 1px solid #E1E1E1;
-    padding: 20px 0px 20px 0px;
+    padding-top: 20px;
     font-size: 14px;
 
     img {
@@ -61,6 +61,18 @@
 
     .height-col {
       min-height: 80px;
+
+      .float-position {
+        float: right;
+      }
+    }
+
+    .twitter-google-plus {
+      margin-top: 6px;
+
+      .padding-follow {
+        margin-left: 10px;
+      }
     }
   }
 
@@ -87,6 +99,12 @@
         text-align: center;
         padding-top: 10px;
         background-color: #E1E1E1;
+      }
+
+      .twitter-google-plus {
+        padding-left: 10px;
+        position: absolute;
+        margin-bottom: 0px;
       }
 
       h4 {
@@ -222,7 +240,24 @@
   }
 
   .facebook-like-page {
-    height: 256px;
+    height: 325px;
+    background: #F6F7F8;
+  }
+}
+
+@media screen and (max-width: 992px){
+
+  .article {
+
+    .footer-article {
+      .col-md-5 {width: 41.66%;}
+      .col-md-7 {
+        width: 58.33%;
+        right: 0px;
+        top: 20px;
+        position: absolute;
+      }
+    }
   }
 }
 
@@ -263,11 +298,19 @@
       height: 253px;
     }
   }
-}
 
-@media screen and (max-width: 768px){
+  .article .footer-article .col-md-7 {
+    width: 100%;
+    top: 0px;
+    position: relative;
+  }
 
-  .article {
-
+  .article .footer-article .col-md-5 {
+    width: 100%;
+  }
+  .article .footer-article .height-col {
+    .float-position {
+      float: left;
+    }
   }
 }

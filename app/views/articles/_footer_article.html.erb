@@ -1,10 +1,17 @@
 <div class="col-md-12 footer-article">
-  <div class="col-md-4">
+  <div class="col-md-5">
     <%= image_tag @article.user.image_url, class: "img-circle" %>
-     &nbsp;<%= @article.user.nickname %>
+     &nbsp;<%= @article.user.nickname %><br />
+    <div class="twitter-google-plus">
+      <%= t "label.follow_us" %>
+        <div class="padding-follow">
+          <div class="g-follow" data-annotation="bubble" data-height="24" data-href="//plus.google.com/u/0/109088437152195157227" data-rel="author"></div><br />
+          <a href="https://twitter.com/Phum_IT" class="twitter-follow-button" data-size="large" data-dnt="true">Follow @Phum_IT</a>
+        </div>
+    </div>
   </div>
-  <div class="col-md-8 height-col">
-    <div class="pull-right">
+  <div class="col-md-7 height-col">
+    <div class="float-position">
       <%= t "articles.labels.source" %>&nbsp;
       <%= @article.source %>
       <div class="padding-top-tag">
