@@ -6,8 +6,9 @@ body, html {
 }
 
 #wrapper {
-  height: 100%;
+  height: auto;
   width: 100%;
+  background-color: #f3f3f3;
 
   .scrollToTop{
     text-align:center;
@@ -30,19 +31,20 @@ body, html {
 
 
   .content {
+    margin-top: 10px;
     min-height: 600px;
     width: auto;
     max-width: 1300px;
     padding: 0px;
-    margin: auto;
+    background-color: white;
+    margin: 10px auto;
+    border-radius: 5px;
   }
 
   .footer {
     border-top: 1px solid #E1E1E1;
-    background-color: #e7e7e7;
     min-height: 200px;
     padding: 10px 0px 10px 0px;
-    margin-top: 10px;
 
     img {
       width: 100px;
