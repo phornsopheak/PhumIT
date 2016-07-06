@@ -18,7 +18,9 @@
           </span>
         </div>
       </div>
-      <%= image_tag @article.image_url %>
+      <% unless @article.image_url == nil %>
+        <%= image_tag @article.image_url %>
+      <% end %>
       <div class="description-box">
         <%= @article.description.html_safe %>
       </div>
