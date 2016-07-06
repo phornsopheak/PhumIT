@@ -15,9 +15,6 @@ class Article < ActiveRecord::Base
   validates :title, presence: true
   validates :description, presence: true
   validates :source, presence: true
-  validates :image, presence: true
-  validates :categories, presence: true
-  validates :lists, presence: true
   validates :link_source, presence: true
   validates :user, presence: true
   validates :state, presence: true
