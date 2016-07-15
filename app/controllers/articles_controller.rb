@@ -10,6 +10,10 @@ class ArticlesController < ApplicationController
   end
 
   def show
+    title = @article.title
+    split_title = title.split(/["", " "]/)
+    set_meta_tags description: ActionView::Base.full_sanitizer.sanitize(@article.description)
+    set_meta_tags keywords: [title, split_title]
   end
 
   private
