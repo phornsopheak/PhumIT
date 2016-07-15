@@ -32,6 +32,7 @@ gem "mini_magick"
 gem "unicorn", "~> 5.0.1"
 gem "factory_girl_rails"
 gem "faker"
+gem "meta-tags"
 
 gem "sdoc", "~> 0.4.0", group: :doc
 
