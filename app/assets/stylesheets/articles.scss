@@ -86,6 +86,8 @@
     margin-top: 10px;
     border: 1px solid #E1E1E1;
     height: 482px;
+    max-width: 400px;
+    float: right;
 
     .header-side-bar {
       width: 100%;
@@ -239,7 +241,7 @@
   }
 
   .facebook-like-page {
-    height: 325px;
+    height: 255px;
     background: #F6F7F8;
   }
 }
@@ -247,6 +249,10 @@
 @media screen and (max-width: 992px){
 
   .article {
+
+    .side-bar {
+      float: none;
+    }
 
     .footer-article {
       .col-md-5 {width: 41.66%;}
@@ -291,6 +297,7 @@
 
     .side-bar {
       height: 489px;
+      float: none;
     }
 
     .facebook-like-page {
