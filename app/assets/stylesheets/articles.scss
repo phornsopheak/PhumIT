@@ -161,6 +161,8 @@
 
   .sidebar-about-us {
     padding: 0px;
+    max-width: 400px;
+    float: right;
 
     .category-box {
       margin-top: 10px;
@@ -260,6 +262,10 @@
   .article {
 
     .side-bar {
+      float: none;
+    }
+
+    .sidebar-about-us {
       float: none;
     }
 
