@@ -7,7 +7,7 @@
   h3 {
     color: #337ab7;
     line-height: 36px;
-    font-size: 30px;
+    font-size: 25px;
     padding-left: 5px;
   }
 
@@ -16,13 +16,21 @@
     width: 100%;
   }
 
+  .clear-padding-col {
+    padding: 0px;
+  }
+
   .content-article {
     width: 100%;
     min-height: 800px;
   }
 
+  .background-color-content {
+    background-color: white;
+  }
+
   .description-box {
-    margin: 15px 0px 15px 0px;
+    margin: 15px;
     line-height: 27px;
   }
 
@@ -77,17 +85,17 @@
   }
 
   .action-share {
-    margin-top: 0px;
-    padding-left: 0px;
+    line-height: 0px;
   }
 
   .side-bar {
     padding: 0px;
     margin-top: 10px;
-    border: 1px solid #E1E1E1;
+  #  border: 1px solid #E1E1E1;
     height: 482px;
     max-width: 400px;
     float: right;
+    background-color: white;
 
     .header-side-bar {
       width: 100%;
@@ -242,7 +250,8 @@
 
   .facebook-like-page {
     height: 255px;
-    background: #F6F7F8;
+    margin-top: 0px;
+  #  background: #F6F7F8;
   }
 }
 
