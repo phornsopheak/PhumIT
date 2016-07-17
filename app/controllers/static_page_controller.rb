@@ -16,4 +16,7 @@ class StaticPageController < ApplicationController
     @electronic_device = Category.fifth
     @electronic_device_articles = @electronic_device.articles.where(state: 0).limit(9)
   end
+
+  def google8f8e10d7f43bf086
+  end
 end
