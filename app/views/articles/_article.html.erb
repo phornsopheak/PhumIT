@@ -10,9 +10,9 @@
     <% end %>
     <div class="detail">
       <span class="fa fa-calendar"></span>
-      <%= article.created_at.strftime("%Y-%m-%d %I:%M %p") %>|
-      <span class="fa fa-eye"></span>
-      <%= article.view %>|
+      <%= article.created_at.strftime("%b %d %Y") %>|
+      <!-- <span class="fa fa-eye"></span>
+      <%= article.view %>| -->
       <span class="fa fa-user"></span>
       <%= article.user.nickname %>
     </div>

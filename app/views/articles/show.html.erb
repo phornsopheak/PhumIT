@@ -1,39 +1,41 @@
 <% provide :title, @article.title %>
-<div class="col-md-12 article">
-  <div class="col-md-8">
-    <div class="content-article">
-      <div class="title">
-        <h3><%= @article.title %></h3>
-        <div class="detail">
-          <span class="fa fa-calendar"></span>
-          &nbsp;<%= @article.created_at.strftime("%b %d %Y") %>
-          <span class="action pull-right">
-            <span>
-              <g:plus action="share" annotation="bubble"></g:plus>
+<div class="article">
+  <div class="col-md-12 clear-padding-col">
+    <div class="col-md-8 background-color-content">
+      <div class="content-article">
+        <div class="title">
+          <h3><%= @article.title %></h3>
+          <div class="detail">
+            <span class="fa fa-calendar"></span>
+            &nbsp;<%= @article.created_at.strftime("%b %d %Y") %>
+            <span class="action pull-right">
+              <span class="fb-like action-share" data-href="<%= request.original_url %>" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true" data-class=""></span>
+              <span>
+                <g:plus action="share" annotation="bubble"></g:plus>
+              </span>
+              <a href="https://twitter.com/share" class="twitter-share-button"{count} data-via="Phum_IT">Tweet</a>
             </span>
-            <a href="https://twitter.com/share" class="twitter-share-button"{count} data-via="Phum_IT">Tweet</a>
-            <span class="fb-like action-share" data-href="<%= request.original_url %>" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true" data-class="aa"></span>
-          </span>
+          </div>
         </div>
+        <% unless @article.image_url == nil %>
+          <%= image_tag @article.image_url %>
+        <% end %>
+        <div class="description-box">
+          <%= @article.description.html_safe %>
+        </div>
+        <%= render "footer_article" %>
+        <div class="fb-comments" data-href="<%= request.original_url %>" data-numposts="10" ></div>
       </div>
-      <% unless @article.image_url == nil %>
-        <%= image_tag @article.image_url %>
-      <% end %>
-      <div class="description-box">
-        <%= @article.description.html_safe %>
-      </div>
-      <%= render "footer_article" %>
-      <div class="fb-comments" data-href="<%= request.original_url %>" data-numposts="10" ></div>
     </div>
-  </div>
 
-  <div class="col-md-4 side-bar facebook-like-page">
-    <%= render "fb_page" %>
-  </div>
-  <div class="col-md-4 side-bar">
-    <%= render "relate_side_bar" %>
-  </div>
-  <div class="col-md-4 side-bar">
-    <%= render "popular_side_bar" %>
+    <div class="col-md-4 side-bar facebook-like-page">
+      <%= render "fb_page" %>
+    </div>
+    <div class="col-md-4 side-bar">
+      <%= render "relate_side_bar" %>
+    </div>
+    <div class="col-md-4 side-bar">
+      <%= render "popular_side_bar" %>
+    </div>
   </div>
 </div>
