@@ -1,24 +1,26 @@
 <% provide :title, t("tab_bar.about_us") %>
-<div class="col-md-12 article lidt home">
-  <div class="col-md-8">
-    <div class="wraper-header clear-col-margin">
-      <div class="header-category">
-        <span class="fa fa-list"></span>
-        <%= check_title %>
+<div class="article lidt home">
+  <div class="col-md-12 clear-padding-col">
+    <div class="col-md-8 background-color-content">
+      <div class="wraper-header clear-col-margin">
+        <div class="header-category">
+          <span class="fa fa-list"></span>
+          <%= check_title %>
+        </div>
+      </div>
+      <div class="content-article">
+        <div class="description-box">
+          <%= @web_detail.about_us.html_safe %>
+        </div>
       </div>
     </div>
-    <div class="content-article">
-      <div class="description-box">
-        <%= @web_detail.about_us.html_safe %>
-      </div>
-    </div>
-  </div>
 
-  <div class="col-md-4 side-bar facebook-like-page">
-    <%= render "articles/fb_page" %>
-  </div>
-  <div class="col-md-4 sidebar-about-us">
-    <%= render "shared/about_us_sidebar" %>
+    <div class="col-md-4 side-bar facebook-like-page">
+      <%= render "articles/fb_page" %>
+    </div>
+    <div class="col-md-4 sidebar-about-us">
+      <%= render "shared/about_us_sidebar" %>
+    </div>
   </div>
 </div>
 
