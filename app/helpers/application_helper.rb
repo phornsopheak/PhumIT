@@ -103,7 +103,7 @@ module ApplicationHelper
       if params_action == "show"
         title = @article.title
         description = @article.description
-        #image = request.protocol + request.host_with_port + @article.image_url
+        image = request.protocol + request.host_with_port + @article.image_url
         url = request.original_url
       else
         url = request.original_url
