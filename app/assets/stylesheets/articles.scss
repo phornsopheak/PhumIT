@@ -34,6 +34,10 @@
     line-height: 27px;
   }
 
+  .over-hide {
+    overflow: hidden;
+  }
+
   .title {
     .detail {
       padding-left: 5px;
@@ -86,11 +90,6 @@
 
   .action-share {
     line-height: 0px;
-  }
-
-  side-bar-ads {
-    height: 278px;
-    background-color: #F3F3F3;
   }
 
   .side-bar {
@@ -162,6 +161,11 @@
         }
       }
     }
+  }
+
+  .side-bar-ads {
+    height: 278px;
+    background-color: #F3F3F3;
   }
 
   .sidebar-about-us {

@@ -23,6 +23,11 @@
         <div class="description-box">
           <%= @article.description.html_safe %>
         </div>
+        <div class="over-hide">
+          <!-- Begin BidVertiser code -->
+            <SCRIPT SRC="http://bdv.bidvertiser.com/BidVertiser.dbm?pid=733156&bid=1814359" TYPE="text/javascript"></SCRIPT>
+          <!-- End BidVertiser code -->
+        </div>
         <%= render "footer_article" %>
         <div class="fb-comments" data-href="<%= request.original_url %>" data-numposts="10" ></div>
       </div>
