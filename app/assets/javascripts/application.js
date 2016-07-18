@@ -5,7 +5,10 @@
 //= require toastr
 //= requitre jquery.clearsearch
 //= require ckeditor/init
-//= require nprogress-turbolinks
+//= require ckeditor/config
+//= require ckeditor/plugins/codesnippet/plugin
+//= require ckeditor/plugins/lineutils/plugin
+//= require ckeditor/plugins/widget/plugin
 //= require_tree .
 
 
