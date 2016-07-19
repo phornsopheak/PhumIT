@@ -29,13 +29,13 @@ en:
     advertise: "ផ្សាយពាណិជ្ជកម្ម"
   label:
     more_article: "បន្ថែមទៀត"
-    search_for: "ស្វែងរកអត្ថបទ..."
-    go: "Search"
+    search_for: "ពាក្យគន្លឹះ..."
+    go: "ស្វែងរក"
     sign_in: "បញ្ចូលគណនី"
     password: "លេខសំងាត់"
     email: "អ៊ីម៉ែល"
     remember: "ចងចាំ"
     danger: "សូមអភ័យទោស!"
-    inform_search: "ពមានលទ្ធផលសំរាប់ការស្វែងរក [%{params}] ទេ។"
+    inform_search: "មិនមានលទ្ធផលសំរាប់ការស្វែងរក [%{params}] ទេ។"
     follow_us: "តាមដានភូមិអាយធីតាមរយៈ ៖"
 
