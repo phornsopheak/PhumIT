@@ -34,6 +34,7 @@ gem "factory_girl_rails"
 gem "faker"
 gem "meta-tags"
 gem "sitemap_generator"
+gem "owlcarousel-rails"
 
 gem "sdoc", "~> 0.4.0", group: :doc
 

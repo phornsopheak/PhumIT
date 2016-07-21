@@ -21,6 +21,9 @@
  *= require toastr
  *= require paginate
  *= require articles
+ *= require owl.carousel
+ *= require owl.theme
+ *= require owlcarousel
  */
 
 @import "bootstrap-sprockets";
@@ -28,6 +31,5 @@
 @import "font-awesome";
 @import "hover";
 @import "media-queries";
-$nprogress-height: 3px;
 @import 'nprogress';
 @import 'nprogress-bootstrap';
