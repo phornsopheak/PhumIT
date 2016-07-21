@@ -1,31 +1,59 @@
 <% provide :title, t("tab_bar.home") %>
 <div class="home">
   <div class="col-md-12 clear-col-margin">
-    <div class="contain-category category-articles">
+    <div class="contain-category">
       <div class="col-md-12 clear-col-margin">
         <div id="owl-demo" class="owl-carousel owl-theme">
-          <div class="item">
-            <%= image_tag @articles.first.image_url %>
-            <div class="title-article"><%= @articles.first.title %></div>
-          </div>
-          <div class="item">
-            <%= image_tag @articles.second.image_url %>
-            <div class="title-article"><%= @articles.second.title %></div>
-          </div>
-          <div class="item">
-            <%= image_tag @articles.third.image_url %>
-            <div class="title-article"><%= @articles.third.title %></div>
-          </div>
-          <div class="item">
-            <%= image_tag @articles.fourth.image_url %>
-            <div class="title-article"><%= @articles.fourth.title %></div>
-          </div>
-          <div class="item">
-            <%= image_tag @articles.fifth.image_url %>
-            <div class="title-article"><%= @articles.fifth.title %></div>
-          </div>
+          <%= link_to article_path(@articles.first) do %>
+            <div class="item">
+              <%= image_tag @articles.first.image_url %>
+              <div class="title-article"><%= @articles.first.title %></div>
+            </div>
+          <% end %>
+          <%= link_to article_path(@articles.first) do %>
+            <div class="item">
+              <%= image_tag @articles.second.image_url %>
+              <div class="title-article"><%= @articles.second.title %></div>
+            </div>
+          <% end %>
+          <%= link_to article_path(@articles.first) do %>
+            <div class="item">
+              <%= image_tag @articles.third.image_url %>
+              <div class="title-article"><%= @articles.third.title %></div>
+            </div>
+          <% end %>
+          <%= link_to article_path(@articles.first) do %>
+            <div class="item">
+              <%= image_tag @articles.fourth.image_url %>
+              <div class="title-article"><%= @articles.fourth.title %></div>
+            </div>
+          <% end %>
+          <%= link_to article_path(@articles.first) do %>
+            <div class="item">
+              <%= image_tag @articles.fifth.image_url %>
+              <div class="title-article"><%= @articles.fifth.title %></div>
+            </div>
+          <% end %>
         </div>
       </div>
+    </div>
+  </div>
+
+  <div class="col-md-12 clear-col-margin">
+    <div class="wraper-header clear-col-margin">
+      <div class="header-category">
+        <%= link_to articles_path do %>
+          <span class="fa fa-list"></span>
+          <%= t "tab_bar.all_articles" %>
+        <% end %>
+        <span class="fa fa-chevron-up cursor arrow-position" id="hide-show-articles"></span>
+        <%= link_to articles_path, class: "pull-right more-article" do %>
+          <i><%= t "label.more_article" %></i>
+        <% end %>
+      </div>
+    </div>
+    <div class="contain-category category-articles">
+      <%= render "category_show" %>
     </div>
   </div>
 
