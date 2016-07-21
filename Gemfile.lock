@@ -155,6 +155,8 @@ GEM
       mini_portile2 (~> 2.0.0.rc2)
     nprogress-rails (0.1.6.7)
     orm_adapter (0.5.0)
+    owlcarousel-rails (1.1.3.3)
+      jquery-rails
     paperclip (4.3.2)
       activemodel (>= 3.2.0)
       activesupport (>= 3.2.0)
@@ -292,6 +294,7 @@ DEPENDENCIES
   mini_magick
   mysql2 (~> 0.3.18)
   nprogress-rails
+  owlcarousel-rails
   paperclip
   pry
   rails (= 4.2.3)
