@@ -15,8 +15,7 @@
 
 $(document).ready(function(){
   resizeSearchBox();
-
-  hideShowCategory();
+  loadOwl();
   fbPageLoad();
   twitterLoad();
   googlePlusLoad();
@@ -93,37 +92,7 @@ function twitterLoad(){
   }(document, 'script', 'twitter-wjs');
 }
 
-function hideShowCategory(){
-
-  $("#hide-show-articles").click(function(){
-    $(".category-articles").slideToggle("show");
-    $(this).toggleClass("fa-chevron-down fa-chevron-up");
-  });
-
-  $("#hide-show-news").click(function(){
-    $(".category-news").slideToggle("show");
-    $(this).toggleClass("fa-chevron-down fa-chevron-up");
-  });
-
-  $("#hide-show-computer").click(function(){
-      $(".category-computer").slideToggle();
-      $(this).toggleClass("fa-chevron-down fa-chevron-up");
-  });
-
-  $("#hide-show-mobile").click(function(){
-      $(".category-mobile").slideToggle();
-      $(this).toggleClass("fa-chevron-down fa-chevron-up");
-  });
-
-  $("#hide-show-popular-article").click(function(){
-      $(".category-popular-article").slideToggle();
-      $(this).toggleClass("fa-chevron-down fa-chevron-up");
-  });
-
-  $("#hide-show-more-knowledge").click(function(){
-      $(".category-more-knowledge").slideToggle();
-      $(this).toggleClass("fa-chevron-down fa-chevron-up");
-  });
+function loadOwl(){
 
   var time = 7; // time in seconds
 
@@ -143,6 +112,7 @@ function hideShowCategory(){
       afterMove : moved,
       startDragging : pauseOnDragging,
       navigation: true,
+      pagination: false,
       lazyLoad : true,
       navigationText: [
       "<i class='fa fa-chevron-left'></i>",
