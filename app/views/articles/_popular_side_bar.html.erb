@@ -7,6 +7,10 @@
   <%= render partial: "articles/article_side_bar", collection: @popular_articles, as: :article_side_bar %>
 
   <div class="more-article hvr-underline-from-center">
-    <%= link_to t("articles.labels.more_article"), category_path(@category) %>
+    <% if action_name == "home" %>
+      <%= link_to t("articles.labels.more_article"), articles_path %>
+    <% else %>
+      <%= link_to t("articles.labels.more_article"), category_path(@category) %>
+    <% end %>
   </div>
 </div>

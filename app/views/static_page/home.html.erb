@@ -4,34 +4,29 @@
     <div class="contain-category">
       <div class="col-md-12 clear-col-margin">
         <div id="owl-demo" class="owl-carousel owl-theme">
-          <%= link_to article_path(@articles.first) do %>
+          <%= link_to category_path(1) do %>
             <div class="item">
-              <%= image_tag @articles.first.image_url %>
-              <div class="title-article"><%= @articles.first.title %></div>
+              <%= image_tag 'Computer.jpg' %>
             </div>
           <% end %>
-          <%= link_to article_path(@articles.first) do %>
+          <%= link_to category_path(2) do %>
             <div class="item">
-              <%= image_tag @articles.second.image_url %>
-              <div class="title-article"><%= @articles.second.title %></div>
+              <%= image_tag 'Knowledge-New.jpg' %>
             </div>
           <% end %>
-          <%= link_to article_path(@articles.first) do %>
+          <%= link_to category_path(3) do %>
             <div class="item">
-              <%= image_tag @articles.third.image_url %>
-              <div class="title-article"><%= @articles.third.title %></div>
+              <%= image_tag 'Phone.jpg' %>
             </div>
           <% end %>
-          <%= link_to article_path(@articles.first) do %>
+          <%= link_to category_path(4) do %>
             <div class="item">
-              <%= image_tag @articles.fourth.image_url %>
-              <div class="title-article"><%= @articles.fourth.title %></div>
+              <%= image_tag 'Tools electronics.jpg' %>
             </div>
           <% end %>
-          <%= link_to article_path(@articles.first) do %>
+          <%= link_to category_path(5) do %>
             <div class="item">
-              <%= image_tag @articles.fifth.image_url %>
-              <div class="title-article"><%= @articles.fifth.title %></div>
+              <%= image_tag 'News.jpg' %>
             </div>
           <% end %>
         </div>
@@ -46,10 +41,6 @@
           <span class="fa fa-list"></span>
           <%= t "tab_bar.all_articles" %>
         <% end %>
-        <span class="fa fa-chevron-up cursor arrow-position" id="hide-show-articles"></span>
-        <%= link_to articles_path, class: "pull-right more-article" do %>
-          <i><%= t "label.more_article" %></i>
-        <% end %>
       </div>
     </div>
     <div class="contain-category category-articles">
@@ -57,98 +48,26 @@
     </div>
   </div>
 
-  <div class="col-md-12 clear-col-margin">
-    <div class="wraper-header clear-col-margin">
-      <div class="header-category">
-        <%= link_to category_path(1) do %>
-          <span class="fa fa-newspaper-o"></span>
-          <%= t "tab_bar.news" %>
+  <div class="list article home">
+    <div class="col-md-12 clear-padding-col">
+      <div class="col-md-8">
+        <% if @articles.blank? %>
+          <div class="show alert alert-danger alert-dismissible top-alert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <strong><%= t "label.danger" %></strong>
+            <%= t "label.inform_search", params: params[:q][:title_cont] %>
+          </div>
         <% end %>
-        <span class="fa fa-chevron-up cursor arrow-position" id="hide-show-news"></span>
-        <%= link_to category_path(1), class: "pull-right more-article" do %>
-          <i><%= t "label.more_article" %></i>
-        <% end %>
+        <div class="content-list">
+         <%= render @articles %>
+         <div class="paginate"><%= paginate @articles, theme: "twitter-bootstrap-3", pagination_class: "pagination-small" %></div>
+        </div>
       </div>
-    </div>
-    <div class="contain-category category-news">
-      <% @articles = @news_articles %>
-      <%= render "category_show" %>
-    </div>
-  </div>
-
-  <div class="col-md-12 clear-col-margin">
-    <div class="wraper-header clear-col-margin">
-      <div class="header-category">
-        <%= link_to category_path(2) do %>
-          <span class="fa fa-desktop"></span>
-          <%= t "tab_bar.computer" %>
-        <% end %>
-        <span class="fa fa-chevron-up cursor arrow-position" id="hide-show-computer"></span>
-        <%= link_to category_path(2), class: "pull-right more-article" do %>
-          <i><%= t "label.more_article" %></i>
-        <% end %>
+      <div class="col-md-4 side-bar">
+        <%= render "articles/popular_side_bar" %>
       </div>
-    </div>
-    <div class="contain-category category-computer">
-      <% @articles = @computer_articles %>
-      <%= render "category_show" %>
-    </div>
-  </div>
-
-  <div class="col-md-12 clear-col-margin">
-    <div class="wraper-header clear-col-margin">
-      <div class="header-category">
-        <%= link_to category_path(3) do %>
-          <span class="fa fa-tablet"></span>
-          <%= t "tab_bar.mobile" %>
-        <% end %>
-        <span class="fa fa-chevron-up cursor arrow-position" id="hide-show-mobile"></span>
-        <%= link_to category_path(3), class: "pull-right more-article" do %>
-          <i><%= t "label.more_article" %></i>
-        <% end %>
-      </div>
-    </div>
-    <div class="contain-category category-mobile">
-      <% @articles = @mobile_articles %>
-      <%= render "category_show" %>
-    </div>
-  </div>
-
-  <div class="col-md-12 clear-col-margin">
-    <div class="wraper-header clear-col-margin">
-      <div class="header-category">
-        <%= link_to category_path(4) do %>
-          <span class="fa fa-book"></span>
-          <%= t "tab_bar.more_knowledge" %>
-        <% end %>
-        <span class="fa fa-chevron-up cursor arrow-position" id="hide-show-more-knowledge"></span>
-        <%= link_to category_path(4), class: "pull-right more-article" do %>
-          <i><%= t "label.more_article" %></i>
-        <% end %>
-      </div>
-    </div>
-    <div class="contain-category category-more-knowledge">
-      <% @articles = @knowledge_articles %>
-      <%= render "category_show" %>
-    </div>
-  </div>
-
-  <div class="col-md-12 clear-col-margin margin-bottom-category">
-    <div class="wraper-header clear-col-margin">
-      <div class="header-category">
-        <%= link_to category_path(5) do %>
-          <span class="fa fa-pie-chart"></span>
-          <%= t "tab_bar.electronic_device" %>
-        <% end %>
-        <span class="fa fa-chevron-up cursor arrow-position" id="hide-show-popular-article"></span>
-         <%= link_to category_path(5), class: "pull-right more-article" do %>
-          <i><%= t "label.more_article" %></i>
-        <% end %>
-      </div>
-    </div>
-    <div class="contain-category category-popular-article">
-      <% @articles = @electronic_device_articles %>
-      <%= render "category_show" %>
     </div>
   </div>
 
