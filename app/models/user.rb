@@ -1,5 +1,7 @@
 class User < ActiveRecord::Base
   include RailsAdminUser
+  include PublicActivity::Model
+  tracked
 
   devise :database_authenticatable, :rememberable, :trackable, :validatable
   #, :registerable, :recoverable,

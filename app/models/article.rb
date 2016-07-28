@@ -2,6 +2,9 @@ class Article < ActiveRecord::Base
   default_scope { order("id DESC") }
 
   include RailsAdminArticle
+  include PublicActivity::Model
+  tracked owner: Proc.new { |controller, model| controller.current_user },
+          on: {update: proc {|model, controller| model.view_changed? }}
 
   belongs_to :user
   has_many :category_articles, dependent: :destroy

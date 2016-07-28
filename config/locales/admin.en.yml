@@ -7,3 +7,7 @@ en:
         title: "Details for %{model_label} '%{object_label}'"
         menu: "Show"
         breadcrumb: "%{object_label}"
+      show_activity:
+        title: "Admin activities."
+        menu: "activities"
+        breadcrumb: "%{object_label}"

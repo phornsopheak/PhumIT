@@ -1,4 +1,6 @@
 class ArticlesController < ApplicationController
+  include PublicActivity::StoreController
+
   before_action :authenticate_user!, except: [:show, :index]
   before_action :find_article, except: :index
   before_action :update_number_of_view, only: :show

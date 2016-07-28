@@ -1,5 +1,7 @@
 require Rails.root.join("lib", "rails_admin", "show_user.rb")
 RailsAdmin::Config::Actions.register(RailsAdmin::Config::Actions::ShowUser)
+require Rails.root.join("lib", "rails_admin", "show_activity.rb")
+RailsAdmin::Config::Actions.register(RailsAdmin::Config::Actions::ShowActivity)
 
 RailsAdmin.config do |config|
 
@@ -31,6 +33,7 @@ RailsAdmin.config do |config|
 
   config.actions do
     dashboard
+    show_activity
     index
     new
     show do

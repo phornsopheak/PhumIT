@@ -1,0 +1,8 @@
+<% user = User.find activity.owner %>
+<% article = Article.find activity.trackable_id %>
+<div class="public-activity">
+  <%= image_tag user.image_url, class: "img-circle" %>
+  <%= link_to user.username, show_user_path(:user, user.id) %>
+  created article <%= link_to article.title, show_path(:article, activity.trackable_id) %>.<br>
+  <%= activity.created_at.strftime("%b %d %Y") %>
+</div>

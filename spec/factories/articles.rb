@@ -6,6 +6,8 @@ FactoryGirl.define do
     source {Faker::Company.name}
     user {User.all.sample}
     state 0
+    link_source "lll"
+    image "image"
 
     after(:create) do |article|
       FactoryGirl.create :list_article, article: article
