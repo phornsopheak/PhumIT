@@ -1,6 +1,6 @@
 <%= link_to article_path(article_side_bar), style:"clear: both;" do %>
   <div class="article-side-bar">
-    <%= image_tag article_side_bar.image_url %>
+    <%= image_tag article_side_bar.image_url(:thumb) %>
     <span class="description-article-side-bar">
       <h5><%= truncate(article_side_bar.title, length: 70) %></h5>
       <br />

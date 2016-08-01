@@ -1,7 +1,7 @@
 <div class="col-md-12 category-show-box">
   <%= link_to article_path(@articles.first) do %>
     <div class="col-md-4 main-article-show">
-      <%= image_tag @articles.first.image_url, class: "main-imag" %>
+      <%= image_tag @articles.first.image_url(:thumb), class: "main-imag" %>
       <div class="main-show-description hvr-shutter-out-horizontal">
         <h3><%= truncate(@articles.first.title, length: 90) %></h3>
       </div>
@@ -11,7 +11,7 @@
     <%= link_to article_path(@articles.second) do %>
       <div class="col-md-4 sub-article-show-line1">
         <div class="aa bb">
-          <%= image_tag @articles.second.image_url %>
+          <%= image_tag @articles.second.image_url(:thumb) %>
           <div class="sub-show-description hvr-shutter-out-horizontal">
             <h3><%= truncate(@articles.second.title, length: 80) %></h3>
           </div>
@@ -21,7 +21,7 @@
     <%= link_to article_path(@articles.third) do %>
       <div class="col-md-4 sub-article-show-line1">
         <div class="aa">
-          <%= image_tag @articles.third.image_url %>
+          <%= image_tag @articles.third.image_url(:thumb) %>
           <div class="sub-show-description hvr-shutter-out-horizontal">
             <h3><%= truncate(@articles.third.title, length: 80) %> </h3>
           </div>
@@ -31,7 +31,7 @@
     <%= link_to article_path(@articles.fourth) do %>
       <div class="col-md-4 sub-article-show-line1">
         <div class="aa">
-          <%= image_tag @articles.fourth.image_url %>
+          <%= image_tag @articles.fourth.image_url(:thumb) %>
           <div class="sub-show-description hvr-shutter-out-horizontal">
             <h3><%= truncate(@articles.fourth.title, length: 80) %></h3>
           </div>
@@ -44,7 +44,7 @@
     <%= link_to article_path(@articles[4]) do %>
       <div class="col-md-4 sub-article-show-line2">
         <div class="aa">
-          <%= image_tag @articles[4].image_url %>
+          <%= image_tag @articles[4].image_url(:thumb) %>
           <div class="sub-show-description hvr-shutter-out-horizontal">
             <h3><%= truncate(@articles[4].title, length: 80) %></h3>
           </div>
@@ -54,7 +54,7 @@
     <%= link_to article_path(@articles[5]) do %>
       <div class="col-md-4 sub-article-show-line2">
         <div class="aa">
-          <%= image_tag @articles[5].image_url %>
+          <%= image_tag @articles[5].image_url(:thumb) %>
           <div class="sub-show-description hvr-shutter-out-horizontal">
             <h3><%= truncate(@articles[5].title, length: 80) %></h3>
           </div>
@@ -64,7 +64,7 @@
     <%= link_to article_path(@articles[6]) do %>
       <div class="col-md-4 sub-article-show-line2">
         <div class="aa">
-          <%= image_tag @articles[6].image_url %>
+          <%= image_tag @articles[6].image_url(:thumb) %>
           <div class="sub-show-description hvr-shutter-out-horizontal">
             <h3><%= truncate(@articles[6].title, length: 80) %></h3>
           </div>

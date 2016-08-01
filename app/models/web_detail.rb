@@ -7,5 +7,5 @@ class WebDetail < ActiveRecord::Base
   validates :telephone, presence: true
   validates :about_us, presence: true
 
-  mount_uploader :image, PhotoUploader
+  mount_uploader :image, UserUploader
 end
