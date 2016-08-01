@@ -1,6 +1,6 @@
 <div class="col-md-12 footer-article">
   <div class="col-md-5">
-    <%= image_tag @article.user.image_url, class: "img-circle" %>
+    <%= image_tag @article.user.image_url(:thumb), class: "img-circle" %>
      &nbsp;<%= @article.user.nickname %><br />
     <div class="twitter-google-plus">
       <%= t "label.follow_us" %>

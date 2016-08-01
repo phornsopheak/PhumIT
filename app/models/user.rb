@@ -3,7 +3,7 @@ class User < ActiveRecord::Base
 
   devise :database_authenticatable, :rememberable, :trackable, :validatable
   #, :registerable, :recoverable,
-  mount_uploader :image, PhotoUploader
+  mount_uploader :image, UserUploader
 
   enum role: [:admin, :manager]
 

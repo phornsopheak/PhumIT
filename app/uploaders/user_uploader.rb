@@ -1,6 +1,6 @@
 # encoding: utf-8
 
-class PhotoUploader < CarrierWave::Uploader::Base
+class UserUploader < CarrierWave::Uploader::Base
 
   # Include RMagick or MiniMagick support:
   # include CarrierWave::RMagick
@@ -41,7 +41,7 @@ class PhotoUploader < CarrierWave::Uploader::Base
 
   version :thumb do
     process :rails_admin_crop
-    process resize_to_fill: [500, 300]
+    process resize_to_fill: [100, 100]
   end
 
   def extension_white_list
