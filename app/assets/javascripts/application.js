@@ -5,6 +5,7 @@
 //= require toastr
 //= require owl.carousel
 //= requitre jquery.clearsearch
+//= requirejquery.sticky
 //= require ckeditor/init
 //= require ckeditor/config
 //= require ckeditor/plugins/codesnippet/plugin
@@ -24,6 +25,8 @@ $(document).ready(function(){
   $(".search-nav").clearSearch();
   $('[data-toggle="tooltip"]').tooltip();
   $('[data-toggle="popover"]').popover({ html : true });
+
+  $("#header").sticky({ topSpacing: 0 });
 
   setTimeout(function() {
     $(".alert").fadeOut("normal");
