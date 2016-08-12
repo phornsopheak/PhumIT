@@ -5,7 +5,8 @@
 //= require toastr
 //= require owl.carousel
 //= requitre jquery.clearsearch
-//= requirejquery.sticky
+//= require jquery.sticky
+//= require jquery.unveil
 //= require ckeditor/init
 //= require ckeditor/config
 //= require ckeditor/plugins/codesnippet/plugin
@@ -20,6 +21,8 @@ $(document).ready(function(){
   fbPageLoad();
   twitterLoad();
   googlePlusLoad();
+
+  $("img").unveil();
 
   $('.width-text').clearSearch();
   $(".search-nav").clearSearch();
