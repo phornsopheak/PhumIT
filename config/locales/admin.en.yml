@@ -1,7 +1,7 @@
 en:
   admin:
     home:
-      name: "PhumIT Site"
+      name: "ភូមិអាយធី"
     actions:
       show_user:
         title: "Details for %{model_label} '%{object_label}'"
