@@ -3,50 +3,26 @@
   <div class="col-md-12 clear-col-margin">
     <div class="contain-category">
       <div class="col-md-12 clear-col-margin">
-        <div id="owl-demo" class="owl-carousel owl-theme">
-          <%= link_to category_path(1) do %>
-            <div class="item">
-              <%= image_tag 'Computer.jpg' %>
-            </div>
-          <% end %>
-          <%= link_to category_path(2) do %>
-            <div class="item">
-              <%= image_tag 'Knowledge-New.jpg' %>
-            </div>
-          <% end %>
-          <%= link_to category_path(3) do %>
-            <div class="item">
-              <%= image_tag 'Phone.jpg' %>
-            </div>
-          <% end %>
-          <%= link_to category_path(4) do %>
-            <div class="item">
-              <%= image_tag 'Tools electronics.jpg' %>
-            </div>
-          <% end %>
-          <%= link_to category_path(5) do %>
-            <div class="item">
-              <%= image_tag 'News.jpg' %>
-            </div>
-          <% end %>
-        </div>
+        <%= render "shared/thum" %>
       </div>
     </div>
   </div>
 
-  <div class="col-md-12 clear-col-margin">
-    <div class="wraper-header clear-col-margin">
-      <div class="header-category">
-        <%= link_to articles_path do %>
-          <span class="fa fa-list"></span>
-          <%= t "tab_bar.all_articles" %>
-        <% end %>
+  <% if params[:page].nil? %>
+    <div class="col-md-12 clear-col-margin">
+      <div class="wraper-header clear-col-margin">
+        <div class="header-category">
+          <%= link_to articles_path do %>
+            <span class="fa fa-list"></span>
+            <%= t "tab_bar.all_articles" %>
+          <% end %>
+        </div>
+      </div>
+      <div class="contain-category category-articles">
+        <%= render "category_show" %>
       </div>
     </div>
-    <div class="contain-category category-articles">
-      <%= render "category_show" %>
-    </div>
-  </div>
+  <% end %>
 
   <div class="list article home">
     <div class="col-md-12 clear-padding-col">
@@ -55,22 +31,34 @@
           <div class="show alert alert-danger alert-dismissible top-alert">
             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
               <span aria-hidden="true">&times;</span>
+              <span></span>
             </button>
             <strong><%= t "label.danger" %></strong>
             <%= t "label.inform_search", params: params[:q][:title_cont] %>
           </div>
         <% end %>
         <div class="content-list">
-         <%= render @articles %>
-         <div class="paginate"><%= paginate @articles, theme: "twitter-bootstrap-3", pagination_class: "pagination-small" %></div>
+          <%= render params[:page] == nil ? @articles[7..-1] : @articles %>
+          <div class="paginate">
+            <%= paginate @articles, theme: "twitter-bootstrap-3", pagination_class: "pagination-small" %>
+          </div>
         </div>
       </div>
       <div class="col-md-4 side-bar">
+        <%= render "articles/popular_side_bar" %>
         <%= render "articles/popular_side_bar" %>
       </div>
       <div class="col-md-4 side-bar">
         <%= image_tag 'connecting.jpg' %>
       </div>
+    </div>
+  </div>
+
+  <div class="col-md-12 clear-col-margin margin-bottom-category">
+    <div class="col-md-7 col-md-offset-2 over-hide">
+      <!-- Begin BidVertiser code -->
+        <SCRIPT SRC="http://bdv.bidvertiser.com/BidVertiser.dbm?pid=733156&bid=1814359" TYPE="text/javascript"></SCRIPT>
+      <!-- End BidVertiser code -->
     </div>
   </div>
 

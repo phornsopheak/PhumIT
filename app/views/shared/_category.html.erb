@@ -16,11 +16,28 @@
       </div>
       <div class="col-xs-5 text-right">
         <%= t "articles.labels.total_article" %>:&nbsp;
-        <span class="huge"><%= category.articles.count %></span>
+        <span class="huge">
+          <%= category.articles.count %>
+        </span>
+        <span class="small-icon">
+          <%= category.articles.count %>
+        </span>
       </div>
     </div>
   </div>
   <%= link_to category_path(category) do %>
+    <div class="panel-footer">
+      <span class="pull-left">
+        <%= check_title_sidebar category.id %>
+      </span>
+      <span class="pull-right">
+        <i class="fa fa-arrow-circle-right"></i>
+      </span>
+      <div class="clearfix"></div>
+    </div>
+  <% end %>
+
+  <%= link_to category_path(article) do %>
     <div class="panel-footer">
       <span class="pull-left">
         <%= check_title_sidebar category.id %>
