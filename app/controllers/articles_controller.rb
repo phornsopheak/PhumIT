@@ -34,8 +34,7 @@ class ArticlesController < ApplicationController
 
   def side_bar_for_show
     @category = @article.categories.first
-    list = @article.lists.first
     @popular_articles = @category.articles.unscoped.where(state: 0).order(view: :desc).limit(4)
-    @relate_articles = list.articles.where(state: 0).limit(4)
+    @relate_articles = @category.articles.where(state: 0).limit(4)
   end
 end
