@@ -18,6 +18,10 @@
     overflow: hidden;
   }
 
+  .clear-padding-left {
+    padding-left: 0px;
+  }
+
   .header-category {
     height: 35px;
     width: 100%;
@@ -34,7 +38,7 @@
 
   .contain-category {
     height: auto;
-    margin: 0px 15px;
+    margin: 0px;
   }
 
   .cursor {
