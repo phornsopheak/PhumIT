@@ -17,6 +17,7 @@
             </span>
           </div>
         </div>
+        <%= render "shared/relate_in_article" %>
         <% unless @article.image_url == nil %>
           <%= image_tag @article.image_url %>
         <% end %>
@@ -29,6 +30,7 @@
             <SCRIPT SRC="http://bdv.bidvertiser.com/BidVertiser.dbm?pid=733156&bid=1814359" TYPE="text/javascript"></SCRIPT>
           <!-- End BidVertiser code -->
         </div>
+        <%= render "shared/relate_in_article" %>
         <%= render "footer_article" %>
         <div class="fb-comments" data-href="<%= request.original_url %>" data-numposts="10" ></div>
       </div>
