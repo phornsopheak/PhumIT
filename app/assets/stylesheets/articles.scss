@@ -51,6 +51,11 @@
     }
   }
 
+  .relate_in_article {
+    font-size: 13px;
+    margin: 10px;
+  }
+
   .footer-article {
     width: 100%;
     height: auto;
@@ -290,6 +295,11 @@
         position: absolute;
       }
     }
+
+    .relate_in_article {
+      font-size: 10px;
+      margin: 5px;
+    }
   }
 }
 
@@ -329,6 +339,11 @@
 
     .facebook-like-page {
       height: 253px;
+    }
+
+    .relate_in_article {
+      font-size: 10px;
+      margin: 0px;
     }
   }
 

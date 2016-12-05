@@ -1,0 +1,7 @@
+<div class="relate_in_article">
+  <% @relate_articles.each do |a| %>
+    <%=link_to article_path(a) do %>
+      <li><%= a.title %></li>
+    <% end %>
+  <% end %>
+</div>
