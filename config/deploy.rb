@@ -77,7 +77,6 @@ namespace :deploy do
   after  :finishing,    :compile_assets
   after  :finishing,    :cleanup
   after  :finishing,    :restart
-  after "deploy:update_code", "deploy:migrate"
 end
 
 # ps aux | grep puma    # Get puma pid
