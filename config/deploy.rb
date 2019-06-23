@@ -1,5 +1,5 @@
 # Change these
-server '68.183.237.203', port: 8080, roles: [:web, :app, :db], primary: true
+server '68.183.237.203', roles: [:web, :app, :db], primary: true
 
 set :repo_url,        'git@github.com:phornsopheak/PhumIT.git'
 set :application,     'phumit'
