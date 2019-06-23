@@ -36,6 +36,7 @@ gem "meta-tags"
 gem "sitemap_generator"
 gem "owlcarousel-rails"
 gem 'puma'
+gem 'dotenv-rails'
 
 group :development, :test do
   gem "web-console", "~> 2.0"

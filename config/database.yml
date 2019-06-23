@@ -51,6 +51,6 @@ test:
 production:
   <<: *default
   database: web_teach_production
-  username: root
+  username: phumit
   password: <%= ENV['WEB_TEACH_DATABASE_PASSWORD'] %>
   strict: false
