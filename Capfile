@@ -9,8 +9,8 @@ require "capistrano/puma"
 install_plugin Capistrano::Puma
 require "capistrano/bundler"
 # require "capistrano/npm"
-require "capistrano/rails/assets"
 require "capistrano/rails/migrations"
+require "capistrano/rails/assets"
 require "whenever/capistrano"
 
 
