@@ -35,8 +35,7 @@ gem "faker"
 gem "meta-tags"
 gem "sitemap_generator"
 gem "owlcarousel-rails"
-
-gem "sdoc", "~> 0.4.0", group: :doc
+gem 'puma'
 
 group :development, :test do
   gem "web-console", "~> 2.0"
@@ -44,5 +43,10 @@ group :development, :test do
   gem "pry"
   gem "factory_girl_rails"
   gem "faker"
+  gem 'capistrano',         require: false
+  gem 'capistrano-rvm',     require: false
+  gem 'capistrano-rails',   require: false
+  gem 'capistrano-bundler', require: false
+  gem 'capistrano3-puma',   require: false
 end
 
